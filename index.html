@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubert S. TONOUKOUIN | Data Analyst & Specialist Marketing/Design/Web</title>
+  <meta name="description" content="Portfolio professionnel de Hubert S. TONOUKOUIN - Data Analyst, Spécialiste Marketing Digital, Design Graphique & Développement Web. Statistiques, Économétrie, Power BI, Python & Communication.">
+  
+  <!-- Fonts: Syne for Headings & Outfit for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind CSS via CDN with Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#0b0c10',
+              dark: '#121212',
+              card: '#1a1a1a',
+              cardHover: '#24242c',
+              gold: '#ffc107',
+              goldLight: '#f5a623',
+              goldGlow: 'rgba(255, 193, 7, 0.25)',
+              text: '#ffffff',
+              muted: '#d1d5db',
+              subtle: '#9ca3af'
+            }
+          },
+          fontFamily: {
+            sans: ['"Outfit"', 'sans-serif'],
+            heading: ['"Syne"', 'sans-serif']
+          },
+          boxShadow: {
+            'gold-glow': '0 0 25px rgba(255, 193, 7, 0.3)',
+            'gold-sm': '0 0 12px rgba(255, 193, 7, 0.2)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar & Utility Styles */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0c10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a2a35;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ffc107;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(255, 193, 7, 0.4);
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 10px 30px -10px rgba(255, 193, 7, 0.2);
+    }
+
+    .glass-nav {
+      background: rgba(11, 12, 16, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, #ffc107 60%, #f5a623 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255, 193, 7, 0.15) 0%, rgba(11, 12, 16, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .modal-backdrop {
+      background: rgba(11, 12, 16, 0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Tooltip styles for floating actions */
+    .floating-btn-group .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      transform: translateY(4px);
+    }
+    .floating-btn-group:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-black text-brand-muted font-sans antialiased selection:bg-brand-gold selection:text-black overflow-x-hidden">
+
+  <!-- Floating Ambient Glows -->
+  <div class="hero-glow top-0 left-1/4 -translate-x-1/2"></div>
+  <div class="hero-glow top-1/3 right-0"></div>
+
+  <!-- FLOATING BOTTOM LEFT BUTTONS: WHATSAPP & MAIL -->
+  <div class="fixed bottom-6 left-6 z-50 flex items-center gap-3">
+    
+    <!-- Floating WhatsApp Button -->
+    <div class="relative floating-btn-group">
+      <a href="https://wa.me/22997150777?text=Bonjour%20Hubert,%20j'ai%20visité%20votre%20portfolio%20et%20je%20souhaite%20échanger%20avec%20vous." 
+         target="_blank" rel="noopener noreferrer" 
+         aria-label="Discuter sur WhatsApp"
+         class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+      </a>
+      <span class="tooltip absolute bottom-full left-0 mb-2 px-3 py-1 bg-brand-dark/95 border border-white/10 text-white text-xs font-semibold rounded-lg shadow-lg whitespace-nowrap">
+        WhatsApp Direct
+      </span>
+    </div>
+
+    <!-- Floating Mail Button (No text display) -->
+    <div class="relative floating-btn-group">
+      <a href="mailto:huberttonoukouin@gmail.com?subject=Prise%20de%20Contact%20-%20Portfolio" 
+         aria-label="Envoyer un e-mail"
+         class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-brand-goldLight to-brand-gold text-black flex items-center justify-center shadow-gold-glow hover:scale-110 active:scale-95 transition-all">
+        <i data-lucide="mail" class="w-6 h-6"></i>
+      </a>
+      <span class="tooltip absolute bottom-full left-0 mb-2 px-3 py-1 bg-brand-dark/95 border border-white/10 text-white text-xs font-semibold rounded-lg shadow-lg whitespace-nowrap">
+        Envoyer un E-mail
+      </span>
+    </div>
+
+  </div>
+
+
+  <!-- 1. HEADER / NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#accueil" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-goldLight to-brand-gold flex items-center justify-center font-heading font-extrabold text-black text-xl shadow-gold-sm group-hover:scale-105 transition-transform">
+          H
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-extrabold text-white text-lg tracking-tight group-hover:text-brand-gold transition-colors">
+            Hubert S. <span class="text-brand-gold">TONOUKOUIN</span>
+          </span>
+          <span class="text-xs text-brand-subtle tracking-wider uppercase font-medium">Data • Marketing • Design • Web</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#accueil" class="text-sm font-medium text-white hover:text-brand-gold transition-colors flex items-center gap-1.5 py-1">
+          <i data-lucide="home" class="w-4 h-4 text-brand-gold"></i> Accueil
+        </a>
+        <a href="#apropos" class="text-sm font-medium text-brand-muted hover:text-brand-gold transition-colors flex items-center gap-1.5 py-1">
+          <i data-lucide="user" class="w-4 h-4 text-brand-gold"></i> À propos
+        </a>
+        <a href="#expertise" class="text-sm font-medium text-brand-muted hover:text-brand-gold transition-colors flex items-center gap-1.5 py-1">
+          <i data-lucide="cpu" class="w-4 h-4 text-brand-gold"></i> Domaines d'Expertise
+        </a>
+        <a href="#portfolio" class="text-sm font-medium text-brand-muted hover:text-brand-gold transition-colors flex items-center gap-1.5 py-1">
+          <i data-lucide="folder-kanban" class="w-4 h-4 text-brand-gold"></i> Projets & Portfolio
+        </a>
+        <a href="#parcours" class="text-sm font-medium text-brand-muted hover:text-brand-gold transition-colors flex items-center gap-1.5 py-1">
+          <i data-lucide="award" class="w-4 h-4 text-brand-gold"></i> Formations
+        </a>
+        <a href="#contact" class="text-sm font-medium text-brand-muted hover:text-brand-gold transition-colors flex items-center gap-1.5 py-1">
+          <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i> Contact
+        </a>
+      </nav>
+
+      <!-- CTA Nav Button -->
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-extrabold text-sm shadow-gold-sm hover:shadow-gold-glow hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>Me Contacter</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-white hover:text-brand-gold hover:bg-white/5 transition-colors" aria-label="Toggle Navigation">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4">
+      <a href="#accueil" class="mobile-link block text-base font-medium text-white hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+        <i data-lucide="home" class="w-5 h-5 text-brand-gold"></i> Accueil
+      </a>
+      <a href="#apropos" class="mobile-link block text-base font-medium text-white hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+        <i data-lucide="user" class="w-5 h-5 text-brand-gold"></i> À propos
+      </a>
+      <a href="#expertise" class="mobile-link block text-base font-medium text-white hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+        <i data-lucide="cpu" class="w-5 h-5 text-brand-gold"></i> Domaines d'Expertise
+      </a>
+      <a href="#portfolio" class="mobile-link block text-base font-medium text-white hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+        <i data-lucide="folder-kanban" class="w-5 h-5 text-brand-gold"></i> Projets & Portfolio
+      </a>
+      <a href="#parcours" class="mobile-link block text-base font-medium text-white hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+        <i data-lucide="award" class="w-5 h-5 text-brand-gold"></i> Formations
+      </a>
+      <a href="#contact" class="mobile-link block text-base font-medium text-white hover:text-brand-gold py-2 flex items-center gap-3">
+        <i data-lucide="mail" class="w-5 h-5 text-brand-gold"></i> Contact
+      </a>
+      <div class="pt-4">
+        <a href="#contact" class="mobile-link w-full py-3 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-extrabold text-center block shadow-gold-sm">
+          Me Contacter
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- 2. SECTION HERO -->
+  <section id="accueil" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-brand-gold/30 text-brand-gold text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md shadow-gold-sm">
+            <span class="text-base animate-bounce">👋</span>
+            <span>Bienvenue sur mon portfolio</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight">
+            Transformer la <span class="text-brand-gold underline decoration-brand-gold/40 underline-offset-8">Donnée</span> en Décision, Propulser la <span class="gold-gradient-text">Visibilité</span> par le Design & le Marketing.
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-brand-muted max-w-2xl leading-relaxed font-normal">
+            Statistiques & Économétrie • Data Analysis & S&E • Marketing Digital • Design Graphique & Développement Web.
+          </p>
+
+          <!-- CTAs & Actions -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <!-- CTA Principal (Jaune/Or) -->
+            <a href="#portfolio" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-black font-extrabold text-base shadow-gold-glow hover:shadow-gold-glow hover:scale-105 active:scale-95 transition-all flex items-center gap-3 group">
+              <span>Explorer mes Projets</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <!-- CTA Secondaire (Bordure) -->
+            <button onclick="openCVModal()" class="px-7 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-base border border-white/20 hover:border-brand-gold/60 transition-all flex items-center gap-3 backdrop-blur-md active:scale-95">
+              <i data-lucide="file-text" class="w-5 h-5 text-brand-gold"></i>
+              <span>Télécharger mon CV</span>
+            </button>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg">
+            <div>
+              <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">8<span class="text-brand-gold">+</span></p>
+              <p class="text-xs text-brand-subtle uppercase tracking-wider mt-1 font-semibold">Années d'Exp.</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">50<span class="text-brand-gold">+</span></p>
+              <p class="text-xs text-brand-subtle uppercase tracking-wider mt-1 font-semibold">Projets Réalisés</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">100<span class="text-brand-gold">%</span></p>
+              <p class="text-xs text-brand-subtle uppercase tracking-wider mt-1 font-semibold">Rigueur Data</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Portrait Image Column -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          
+          <!-- Outer Decorative Aura ring -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-brand-gold/25 to-transparent rounded-3xl blur-2xl -z-10 transform scale-95"></div>
+
+          <!-- Main Image Container -->
+          <div class="relative rounded-3xl p-2 bg-gradient-to-b from-brand-gold/40 via-white/10 to-transparent border border-white/15 max-w-md shadow-2xl">
+            <img id="heroPortraitImg" src="assets/hero_portrait.jpg" alt="Hubert S. TONOUKOUIN - Data Analyst & Specialist Marketing/Design/Web" class="w-full h-auto rounded-2xl object-cover aspect-square shadow-inner">
+            
+            <!-- Floating Badge 1: Data Precision -->
+            <div class="absolute -bottom-5 -left-5 bg-brand-card/90 backdrop-blur-xl border border-white/15 p-4 rounded-2xl shadow-xl flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-brand-subtle font-medium">Expertise S&E</p>
+                <p class="text-sm font-bold text-white">Power BI & Python</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Marketing Growth -->
+            <div class="absolute -top-4 -right-4 bg-brand-card/90 backdrop-blur-xl border border-white/15 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-xs font-bold text-white">+45% Engagement Campaign</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 3. SECTION À PROPOS -->
+  <section id="apropos" class="py-24 bg-brand-dark/60 border-y border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-brand-gold font-bold text-xs tracking-widest uppercase bg-brand-gold/10 px-4 py-1.5 rounded-full border border-brand-gold/20">
+          Qui Suis-Je ?
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+          À Propos de Moi
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Text Box -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="p-8 rounded-3xl bg-brand-card border border-white/10 shadow-xl space-y-6 leading-relaxed relative overflow-hidden">
+            
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-gold/5 rounded-bl-full pointer-events-none"></div>
+
+            <p class="text-base sm:text-lg text-brand-muted font-normal">
+              Profil hybride et polyvalent combinant une solide expertise académique en <strong class="text-white font-semibold">Statistiques & Économétrie</strong> (Licence UAC) et des compétences techniques modernes en <strong class="text-white font-semibold">Data Analyse & IA</strong> (EPITECH Bénin).
+            </p>
+            
+            <p class="text-base sm:text-lg text-brand-muted font-normal">
+              Grâce à mon expérience transversale en gestion de projet, communication digitale, création graphique, montage vidéo et développement web, j'allie la rigueur scientifique de l'analyse de données à l'impact visuel du marketing digital pour offrir des solutions complètes axées sur les résultats.
+            </p>
+
+            <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-white">Rigueur Économétrique</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-white">Design & Impact Visuel</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-white">Aide à la Décision (S&E)</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold flex-shrink-0"></i>
+                <span class="text-sm font-semibold text-white">Développement & Web No-Code</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 4 Competence Cards Grid (Replacing duplicate Data card with Développement Web) -->
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <!-- Card 1: Data & S&E -->
+          <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 hover:border-brand-gold/40 transition-all space-y-3 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="database" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-heading font-extrabold text-white">Data & S&E</h3>
+            <p class="text-xs text-brand-subtle">Analyse quantitative, enquêtes terrain Kobo/ODK, dashboards Power BI.</p>
+          </div>
+
+          <!-- Card 2: Marketing Digital -->
+          <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 hover:border-brand-gold/40 transition-all space-y-3 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="megaphone" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-heading font-extrabold text-white">Marketing Digital</h3>
+            <p class="text-xs text-brand-subtle">Acquisition de prospects, SEO, Community Management & Conversion.</p>
+          </div>
+
+          <!-- Card 3: Design & Vidéo -->
+          <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 hover:border-brand-gold/40 transition-all space-y-3 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="palette" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-heading font-extrabold text-white">Design & Vidéo</h3>
+            <p class="text-xs text-brand-subtle">Identités visuelles, Suite Adobe (Photoshop, Illustrator, Premiere Pro).</p>
+          </div>
+
+          <!-- Card 4: Développement Web (Replaces duplicate Data card) -->
+          <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 hover:border-brand-gold/40 transition-all space-y-3 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-heading font-extrabold text-white">Développement Web</h3>
+            <p class="text-xs text-brand-subtle">WordPress Avancé, Intégration Web, HTML/CSS, UI/UX, Blemama, No-Code/Low-Code.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 4. SECTION DOMAINES D'EXPERTISE (4 Glassmorphism Cards on Dark Visual BG) -->
+  <section id="expertise" class="py-28 relative bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('assets/expertise_bg.jpg');">
+    
+    <!-- Dark Overlay for Contrast -->
+    <div class="absolute inset-0 bg-brand-black/85 backdrop-brightness-75 z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-brand-gold font-bold text-xs tracking-widest uppercase bg-brand-gold/20 border border-brand-gold/40 px-4 py-1.5 rounded-full backdrop-blur-md">
+          Savoir-Faire & Compétences
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-heading font-extrabold text-white">
+          Mes Domaines d'Expertise
+        </h2>
+        <p class="text-base text-brand-muted">
+          Une quadruple compétence articulée autour de la donnée, de la stratégie, de la création visuelle et du web.
+        </p>
+        <div class="w-20 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight mx-auto rounded-full"></div>
+      </div>
+
+      <!-- 4 Glassmorphism Competence Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Data & Stats -->
+        <div class="glass-card rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-5">
+            
+            <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border border-brand-gold/40 text-brand-gold flex items-center justify-center text-2xl shadow-gold-sm group-hover:scale-110 transition-transform">
+              📊
+            </div>
+
+            <h3 class="text-lg font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+              Analyse de Données & Statistiques
+            </h3>
+
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Traitement et nettoyage de données brutes, modélisation économétrique, conception de dashboards interactifs (Power BI), enquêtes (KoboToolbox/ODK) et aide à la décision stratégique (S&E).
+            </p>
+
+          </div>
+
+          <div class="pt-6 border-t border-white/10 mt-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-brand-gold mb-2.5">Outils & Stack :</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Python</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">SQL</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Power BI</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Excel</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Stata</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">EViews</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Marketing Digital -->
+        <div class="glass-card rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-5">
+            
+            <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border border-brand-gold/40 text-brand-gold flex items-center justify-center text-2xl shadow-gold-sm group-hover:scale-110 transition-transform">
+              📣
+            </div>
+
+            <h3 class="text-lg font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+              Communication & Marketing Digital
+            </h3>
+
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Élaboration et déploiement de stratégies digitales multi-canaux, acquisition de prospects, animation de communauté, SEO/Google Business et analyse des KPI marketing.
+            </p>
+
+          </div>
+
+          <div class="pt-6 border-t border-white/10 mt-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-brand-gold mb-2.5">Compétences :</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Copywriting</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Community Mgmt</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Funnels</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Design & Vidéo -->
+        <div class="glass-card rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-5">
+            
+            <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border border-brand-gold/40 text-brand-gold flex items-center justify-center text-2xl shadow-gold-sm group-hover:scale-110 transition-transform">
+              🎨
+            </div>
+
+            <h3 class="text-lg font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+              Design Graphique & Montage Vidéo
+            </h3>
+
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Conception d'identités visuelles percutantes, création de supports de communication (affiche, visuels réseaux sociaux) et montage vidéo dynamique pour propulser l'engagement.
+            </p>
+
+          </div>
+
+          <div class="pt-6 border-t border-white/10 mt-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-brand-gold mb-2.5">Suite & Logiciels :</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Photoshop</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Illustrator</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Premiere Pro</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Canva</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Développement Web & No-Code (NEW CARD) -->
+        <div class="glass-card rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-5">
+            
+            <div class="w-13 h-13 rounded-2xl bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border border-brand-gold/40 text-brand-gold flex items-center justify-center text-2xl shadow-gold-sm group-hover:scale-110 transition-transform">
+              💻
+            </div>
+
+            <h3 class="text-lg font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+              Développement Web & Solutions No-Code
+            </h3>
+
+            <p class="text-xs text-brand-muted leading-relaxed">
+              Conception et développement de sites web vitrines et dynamiques, intégration responsive, solutions no-code/low-code et gestion de plateformes web.
+            </p>
+
+          </div>
+
+          <div class="pt-6 border-t border-white/10 mt-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-brand-gold mb-2.5">Technologies & CMS :</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">WordPress</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">HTML/CSS</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">JavaScript</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10 font-medium">Systeme.io</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 5. SECTION PORTFOLIO / PROJETS -->
+  <section id="portfolio" class="py-24 bg-brand-black relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <span class="text-brand-gold font-bold text-xs tracking-widest uppercase bg-brand-gold/10 px-4 py-1.5 rounded-full border border-brand-gold/20">
+          Réalisations Récentes
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-heading font-extrabold text-white">
+          Projets & Portfolio
+        </h2>
+        <p class="text-base text-brand-muted">
+          Découvrez une sélection de projets concrets combinant rigueur analytique, stratégie marketing, création visuelle et développement web.
+        </p>
+        <div class="w-20 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap justify-center items-center gap-3 mb-12">
+        <button onclick="filterPortfolio('all')" class="filter-btn active px-6 py-2.5 rounded-full text-sm font-bold transition-all bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-gold-sm" data-category="all">
+          Tous les Projets
+        </button>
+        <button onclick="filterPortfolio('data')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-brand-card text-brand-muted hover:text-white border border-white/10 hover:border-brand-gold/40" data-category="data">
+          Data & BI
+        </button>
+        <button onclick="filterPortfolio('marketing')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-brand-card text-brand-muted hover:text-white border border-white/10 hover:border-brand-gold/40" data-category="marketing">
+          Marketing Digital
+        </button>
+        <button onclick="filterPortfolio('design')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-brand-card text-brand-muted hover:text-white border border-white/10 hover:border-brand-gold/40" data-category="design">
+          Design & Vidéo
+        </button>
+        <button onclick="filterPortfolio('web')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-brand-card text-brand-muted hover:text-white border border-white/10 hover:border-brand-gold/40" data-category="web">
+          Développement Web
+        </button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projectsGrid">
+        
+        <!-- Project 1: Data & BI -->
+        <div class="project-card data group rounded-3xl bg-brand-card border border-white/10 overflow-hidden hover:border-brand-gold/50 transition-all duration-300 flex flex-col">
+          <div class="relative overflow-hidden aspect-video">
+            <img src="assets/project_powerbi.jpg" alt="Dashboard Power BI Performance Commerciale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-brand-black/80 backdrop-blur-md text-brand-gold text-xs font-bold border border-brand-gold/30">
+                Data & BI
+              </span>
+            </div>
+          </div>
+          
+          <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <h3 class="text-xl font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+                Dashboard de Suivi de Performance Commerciale (Power BI / IWO GROUP)
+              </h3>
+              <p class="text-sm text-brand-subtle leading-relaxed">
+                Modélisation et conception d'un tableau de bord interactif pour la direction commerciale. Centralisation des données de vente, analyse prédictive et suivi des KPI.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-4 border-t border-white/10">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Power BI</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">DAX</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">SQL</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Excel</span>
+              </div>
+
+              <button onclick="openProjectModal('powerbi')" class="w-full py-3 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold text-sm transition-all flex items-center justify-center gap-2 group/btn">
+                <span>Voir les détails du projet</span>
+                <i data-lucide="external-link" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Data/IA EPITECH -->
+        <div class="project-card data group rounded-3xl bg-brand-card border border-white/10 overflow-hidden hover:border-brand-gold/50 transition-all duration-300 flex flex-col">
+          <div class="relative overflow-hidden aspect-video">
+            <img src="assets/project_ml_nlp.jpg" alt="Modèle Machine Learning & NLP" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-brand-black/80 backdrop-blur-md text-brand-gold text-xs font-bold border border-brand-gold/30">
+                Data & IA
+              </span>
+            </div>
+          </div>
+          
+          <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <h3 class="text-xl font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+                Modèle Machine Learning & Traitement NLP (EPITECH Bénin)
+              </h3>
+              <p class="text-sm text-brand-subtle leading-relaxed">
+                Développement d'un pipeline d'apprentissage automatique et de classification textuelle NLP. Analyse de sentiments et automatisation du traitement de flux de feedback.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-4 border-t border-white/10">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Python</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Scikit-Learn</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">NLP</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Pandas</span>
+              </div>
+
+              <button onclick="openProjectModal('nlp')" class="w-full py-3 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold text-sm transition-all flex items-center justify-center gap-2 group/btn">
+                <span>Voir les détails du projet</span>
+                <i data-lucide="external-link" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Marketing Digital -->
+        <div class="project-card marketing group rounded-3xl bg-brand-card border border-white/10 overflow-hidden hover:border-brand-gold/50 transition-all duration-300 flex flex-col">
+          <div class="relative overflow-hidden aspect-video">
+            <img src="assets/project_marketing.jpg" alt="Stratégie d'Acquisition & Campagnes Campus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-brand-black/80 backdrop-blur-md text-brand-gold text-xs font-bold border border-brand-gold/30">
+                Marketing Digital
+              </span>
+            </div>
+            <div class="absolute bottom-4 right-4 bg-emerald-500/90 text-white font-bold text-xs px-3 py-1 rounded-full backdrop-blur-md">
+              +45% Engagement
+            </div>
+          </div>
+          
+          <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <h3 class="text-xl font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+                Stratégie d'Acquisition & Campagnes Campus (+45% d'engagement)
+              </h3>
+              <p class="text-sm text-brand-subtle leading-relaxed">
+                Campagne omnicanale de notoriété et de recrutement d'apprenants. Stratégie de contenu cible, funnels social media et optimisation continue des taux de conversion.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-4 border-t border-white/10">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Community Management</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Ads Strategy</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Analytics</span>
+              </div>
+
+              <button onclick="openProjectModal('marketing')" class="w-full py-3 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold text-sm transition-all flex items-center justify-center gap-2 group/btn">
+                <span>Voir les détails du projet</span>
+                <i data-lucide="external-link" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Design & Vidéo & Web -->
+        <div class="project-card design web group rounded-3xl bg-brand-card border border-white/10 overflow-hidden hover:border-brand-gold/50 transition-all duration-300 flex flex-col">
+          <div class="relative overflow-hidden aspect-video">
+            <img src="assets/project_design_video.jpg" alt="Conception Supports Multimédia & Intégration Web" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-brand-black/80 backdrop-blur-md text-brand-gold text-xs font-bold border border-brand-gold/30">
+                Design & Web
+              </span>
+            </div>
+          </div>
+          
+          <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <h3 class="text-xl font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+                Conception de Supports Multimédia & Plateformes Web Dynamiques
+              </h3>
+              <p class="text-sm text-brand-subtle leading-relaxed">
+                Création d'identités visuelles, sites vitrines WordPress & responsive web design, supports digitaux et montage de teasers vidéos dynamiques.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-4 border-t border-white/10">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">WordPress</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">HTML/CSS</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Photoshop</span>
+                <span class="text-xs px-3 py-1 rounded-lg bg-white/5 text-brand-muted font-medium">Premiere Pro</span>
+              </div>
+
+              <button onclick="openProjectModal('design')" class="w-full py-3 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold text-sm transition-all flex items-center justify-center gap-2 group/btn">
+                <span>Voir les détails du projet</span>
+                <i data-lucide="external-link" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 5. SECTION PARCOURS ACADÉMIQUE & DIPLÔMES (Remaniée & Épurée sous forme de Badges & Modale) -->
+  <section id="parcours" class="py-20 bg-brand-dark/70 border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <span class="text-brand-gold font-bold text-xs tracking-widest uppercase bg-brand-gold/10 px-4 py-1.5 rounded-full border border-brand-gold/20">
+          Cursus & Certifications
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+          Formations & Diplômes Clés
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Compact Badges Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        
+        <!-- Badge 1: EPITECH -->
+        <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all space-y-4 flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold">2023</span>
+              <i data-lucide="code" class="w-5 h-5 text-brand-gold"></i>
+            </div>
+            <h3 class="text-lg font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+              Certificat Développement & Data Analysis
+            </h3>
+            <p class="text-xs text-brand-gold font-semibold">EPITECH Bénin</p>
+            <p class="text-xs text-brand-subtle leading-relaxed">
+              Machine Learning, Python, NLP, SQL & Développement logiciel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Badge 2: UAC Licence -->
+        <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all space-y-4 flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold">2016</span>
+              <i data-lucide="award" class="w-5 h-5 text-brand-gold"></i>
+            </div>
+            <h3 class="text-lg font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+              Licence Statistiques & Économétrie
+            </h3>
+            <p class="text-xs text-brand-gold font-semibold">FASEG — Univ. d'Abomey-Calavi (UAC)</p>
+            <p class="text-xs text-brand-subtle leading-relaxed">
+              Modélisation économétrique, sondages, S&E et analyse quantitative.
+            </p>
+          </div>
+        </div>
+
+        <!-- Badge 3: Certifications -->
+        <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all space-y-4 flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold">Continu</span>
+              <i data-lucide="shield-check" class="w-5 h-5 text-brand-gold"></i>
+            </div>
+            <h3 class="text-lg font-heading font-extrabold text-white group-hover:text-brand-gold transition-colors">
+              Certifications & Compétences Clés
+            </h3>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[11px] px-2.5 py-1 rounded-lg bg-white/5 text-white border border-white/10 font-medium">Community Mgmt</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-lg bg-white/5 text-white border border-white/10 font-medium">WordPress Avancé</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-lg bg-white/5 text-white border border-white/10 font-medium">Initiation IA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Button for Detailed Academic Modal -->
+      <div class="pt-10 text-center">
+        <button onclick="openParcoursModal()" class="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-sm border border-white/15 hover:border-brand-gold/50 transition-all inline-flex items-center gap-2">
+          <i data-lucide="graduation-cap" class="w-4 h-4 text-brand-gold"></i>
+          <span>Voir le détail complet du parcours & compétences</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 6. SECTION CONTACT & FOOTER -->
+  <section id="contact" class="py-24 bg-brand-black relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Information Column -->
+        <div class="lg:col-span-5 space-y-8">
+          
+          <div class="space-y-4">
+            <span class="text-brand-gold font-bold text-xs tracking-widest uppercase bg-brand-gold/10 px-4 py-1.5 rounded-full border border-brand-gold/20">
+              Travaillons Ensemble
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+              Prêt à collaborer sur votre prochain projet ?
+            </h2>
+            <p class="text-base text-brand-subtle">
+              Une question, un besoin en analyse de données, en marketing digital, en création visuelle ou en développement web ? N'hésitez pas à me contacter directement.
+            </p>
+          </div>
+
+          <!-- Direct Contact Cards -->
+          <div class="space-y-4">
+            
+            <!-- Phone -->
+            <a href="tel:+22997150777" class="p-5 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Téléphone & WhatsApp</p>
+                <p class="text-base font-bold text-white group-hover:text-brand-gold transition-colors">
+                  (+229) 97 15 07 77 / 95 69 89 47
+                </p>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:huberttonoukouin@gmail.com" class="p-5 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Adresse E-mail</p>
+                <p class="text-base font-bold text-white group-hover:text-brand-gold transition-colors">
+                  huberttonoukouin@gmail.com
+                </p>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="p-5 rounded-2xl bg-brand-card border border-white/10 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Localisation</p>
+                <p class="text-base font-bold text-white">
+                  Abomey-Calavi, Bénin
+                </p>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/huberttsossou" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i data-lucide="linkedin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Profil LinkedIn</p>
+                <p class="text-base font-bold text-white group-hover:text-brand-gold transition-colors">
+                  linkedin.com/in/huberttsossou
+                </p>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-brand-card border border-white/10 p-8 sm:p-10 rounded-3xl shadow-2xl relative">
+            <h3 class="text-2xl font-heading font-extrabold text-white mb-6">
+              Envoyez-moi un message
+            </h3>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Votre Nom Complet</label>
+                  <input type="text" required placeholder="Jean Dupont" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Votre Adresse Email</label>
+                  <input type="email" required placeholder="jean.dupont@exemple.com" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Sujet de votre message</label>
+                <input type="text" required placeholder="Opportunité de projet / Conseil Data & Marketing" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Message</label>
+                <textarea rows="5" required placeholder="Bonjour Hubert, je souhaiterais collaborer sur..." class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-extrabold text-base shadow-gold-sm hover:shadow-gold-glow hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
+                <i data-lucide="send" class="w-5 h-5"></i>
+                <span>Envoyer le Message</span>
+              </button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-brand-black border-t border-white/10 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-goldLight to-brand-gold flex items-center justify-center font-heading font-extrabold text-black text-base shadow-gold-sm">
+          H
+        </div>
+        <span class="font-heading font-extrabold text-white text-lg">Hubert SOSSOU TONOUKOUIN</span>
+      </div>
+
+      <p class="text-sm text-brand-subtle max-w-md mx-auto">
+        Rigueur scientifique, prise de décision basée sur la donnée, impact visuel et développement web modernisé.
+      </p>
+
+      <p class="text-xs text-brand-subtle pt-4 border-t border-white/5">
+        © 2026 Hubert SOSSOU TONOUKOUIN. Tous droits réservés.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="bg-brand-card border border-white/15 rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-6 relative shadow-2xl my-8">
+      
+      <button onclick="closeProjectModal()" class="absolute top-6 right-6 p-2 rounded-full bg-white/5 hover:bg-white/10 text-brand-subtle hover:text-white transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+
+  <!-- PARCOURS ACADÉMIQUE DETAILED MODAL -->
+  <div id="parcoursModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="bg-brand-card border border-white/15 rounded-3xl max-w-2xl w-full p-8 space-y-6 relative shadow-2xl my-8">
+      
+      <button onclick="closeParcoursModal()" class="absolute top-6 right-6 p-2 rounded-full bg-white/5 hover:bg-white/10 text-brand-subtle hover:text-white transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold">
+          <i data-lucide="graduation-cap" class="w-4 h-4"></i> Parcours Complet
+        </div>
+        <h3 class="text-2xl font-heading font-extrabold text-white">Détail des Formations & Diplômes</h3>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight rounded-full"></div>
+      </div>
+
+      <div class="space-y-6 text-left border-l-2 border-brand-gold/30 pl-6 my-4">
+        
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-bold text-white">Certificat Développement & Data Analysis</span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-gold/20 text-brand-gold font-bold">2023</span>
+          </div>
+          <p class="text-xs font-semibold text-brand-gold">EPITECH Bénin</p>
+          <p class="text-xs text-brand-subtle leading-relaxed">
+            Formation intensive axée sur l'analyse de données avec Python, la modélisation en Machine Learning, le traitement NLP, la gestion de bases de données SQL et le développement logiciel moderne.
+          </p>
+        </div>
+
+        <div class="space-y-2 pt-4 border-t border-white/10">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-bold text-white">Licence Professionnelle Statistiques & Économétrie</span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-gold/20 text-brand-gold font-bold">2016</span>
+          </div>
+          <p class="text-xs font-semibold text-brand-gold">FASEG — Université d'Abomey-Calavi (UAC)</p>
+          <p class="text-xs text-brand-subtle leading-relaxed">
+            Solide formation universitaire en méthodologies statistiques, modélisation économétrique, économie appliquée, sondages, traitement informatique des données et rédaction de rapports de suivi-évaluation (S&E).
+          </p>
+        </div>
+
+        <div class="space-y-2 pt-4 border-t border-white/10">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-bold text-white">Attestations & Certifications Continues</span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-gold/20 text-brand-gold font-bold">En continu</span>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="text-xs px-3 py-1 rounded-xl bg-white/5 border border-white/10 text-white font-medium">Community Management</span>
+            <span class="text-xs px-3 py-1 rounded-xl bg-white/5 border border-white/10 text-white font-medium">WordPress Avancé</span>
+            <span class="text-xs px-3 py-1 rounded-xl bg-white/5 border border-white/10 text-white font-medium">Initiation & Usages IA</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-4 border-t border-white/10 text-right">
+        <button onclick="closeParcoursModal()" class="px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold">
+          Fermer
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- CV DOWNLOAD PREVIEW MODAL -->
+  <div id="cvModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 sm:p-6">
+    <div class="bg-brand-card border border-white/15 rounded-3xl max-w-lg w-full p-8 text-center space-y-6 relative shadow-2xl">
+      
+      <button onclick="closeCVModal()" class="absolute top-6 right-6 p-2 rounded-full bg-white/5 hover:bg-white/10 text-brand-subtle hover:text-white transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="w-16 h-16 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 text-brand-gold flex items-center justify-center mx-auto text-3xl">
+        <i data-lucide="file-text" class="w-8 h-8"></i>
+      </div>
+
+      <div class="space-y-2">
+        <h3 class="text-2xl font-heading font-extrabold text-white">Curriculum Vitae</h3>
+        <p class="text-sm text-brand-subtle">Hubert SOSSOU TONOUKOUIN — Data Analyst & Specialist Marketing/Design/Web</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-left text-xs space-y-2">
+        <p class="text-white font-semibold">✓ Licence Statistiques & Économétrie (UAC)</p>
+        <p class="text-white font-semibold">✓ Certificat Data Analysis & IA (EPITECH)</p>
+        <p class="text-white font-semibold">✓ Power BI, Python, SQL, Marketing Digital, Suite Adobe & Web</p>
+      </div>
+
+      <div class="pt-2 flex flex-col gap-3">
+        <a href="mailto:huberttonoukouin@gmail.com?subject=Demande%20de%20CV%20Complet%20-%20Hubert%20TONOUKOUIN" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-extrabold text-sm shadow-gold-sm flex items-center justify-center gap-2">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Télécharger le CV (Format PDF)</span>
+        </a>
+        <button onclick="closeCVModal()" class="w-full py-3 rounded-xl bg-white/5 text-brand-muted hover:text-white text-sm font-semibold">
+          Fermer
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-brand-card border border-brand-gold/50 text-white px-6 py-4 rounded-2xl shadow-gold-glow flex items-center gap-3 transition-all transform translate-y-4">
+    <i data-lucide="check-circle" class="w-5 h-5 text-brand-gold"></i>
+    <span id="toastMessage" class="text-sm font-bold">Votre message a été envoyé avec succès !</span>
+  </div>
+
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Configurable Hero Profile Image URL variable for easy swapping
+    const HERO_IMAGE_URL = 'assets/hero_portrait.jpg';
+    
+    // Apply dynamic hero portrait image source
+    document.addEventListener('DOMContentLoaded', () => {
+      const imgElement = document.getElementById('heroPortraitImg');
+      if (imgElement) {
+        imgElement.src = HERO_IMAGE_URL;
+      }
+    });
+
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Project Filtering Logic
+    function filterPortfolio(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.className = 'filter-btn active px-6 py-2.5 rounded-full text-sm font-bold transition-all bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-gold-sm';
+        } else {
+          btn.className = 'filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-brand-card text-brand-muted hover:text-white border border-white/10 hover:border-brand-gold/40';
+        }
+      });
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Data Definitions
+    const projectsData = {
+      powerbi: {
+        title: "Dashboard de Suivi de Performance Commerciale (Power BI / IWO GROUP)",
+        category: "Data Analysis & Business Intelligence",
+        image: "assets/project_powerbi.jpg",
+        description: "Centralisation et modélisation des flux de données de vente pour la direction générale et commerciale. Réduction des délais de reporting décisionnel.",
+        problem: "Données marchandes fragmentées sur plusieurs fichiers Excel sans vision consolidée des performances régionales.",
+        solution: "Modèle de données relationnel en étoile (Power BI + DAX), automatisant les flux d'intégration et générant des KPI dynamiques.",
+        results: ["-65% de temps passé sur la création des rapports mensuels", "Détection en temps réel des produits leaders et sous-performants", "Adoption par l'équipe commerciale et de gestion"],
+        tools: ["Power BI", "DAX", "SQL Server", "Excel Avancé"]
+      },
+      nlp: {
+        title: "Modèle Machine Learning & Traitement NLP (EPITECH Bénin)",
+        category: "Data Analyse & Intelligence Artificielle",
+        image: "assets/project_ml_nlp.jpg",
+        description: "Conception d'une chaîne algorithmique d'analyse textuelle pour la catégorisation automatique et l'extraction de sentiments.",
+        problem: "Nécessité de traiter et classer de grands volumes de retours textuels clients non structurés.",
+        solution: "Prétraitement NLP (tokenisation, TF-IDF/embeddings) suivi d'un modèle d'apprentissage supervisé (Scikit-learn).",
+        results: ["Précision du modèle supérieure à 92%", "Automatisation du tri des feedbacks négatifs/positifs", "Projet salué lors du cursus EPITECH"],
+        tools: ["Python", "Scikit-Learn", "NLTK / Pandas", "Jupyter"]
+      },
+      marketing: {
+        title: "Stratégie d'Acquisition & Campagnes Campus (+45% d'engagement)",
+        category: "Marketing Digital & Stratégie Omnicanale",
+        image: "assets/project_marketing.jpg",
+        description: "Déploiement d'un plan de communication et d'acquisition de prospects pour booster la visibilité des programmes de formation.",
+        problem: "Manque d'engagement sur les canaux sociaux et faible taux de conversion des formulaires de prospects.",
+        solution: "Repensée complète du tunnel de conversion, création de contenus engageants et campagnes ciblées multi-canaux.",
+        results: ["+45% d'engagement global sur les réseaux sociaux", "+30% de prospects qualifiés inscrits", "Optimisation du coût par acquisition (CPA)"],
+        tools: ["Copywriting", "Meta Ads Manager", "Google Analytics", "Funnels"]
+      },
+      design: {
+        title: "Conception de Supports Multimédia & Intégration Web",
+        category: "Design Graphique & Développement Web",
+        image: "assets/project_design_video.jpg",
+        description: "Réalisation de l'identité visuelle de campagnes événementielles, création d'affiches grand format, intégration web et montage de capsules vidéo.",
+        problem: "Besoin de visuels à fort impact et d'une présence web fluide pour capter l'attention.",
+        solution: "Charte graphique moderne, déclinaisons multiformats, intégration web WordPress/responsive et motion design dynamique.",
+        results: ["Forte valorisation de l'image de marque", "Format vidéo court à haut taux de rétention", "Interface web fluide et 100% responsive"],
+        tools: ["WordPress", "Photoshop", "Illustrator", "Premiere Pro", "HTML/CSS"]
+      }
+    };
+
+    // Open Project Modal
+    function openProjectModal(key) {
+      const modal = document.getElementById('projectModal');
+      const content = document.getElementById('modalContent');
+      const data = projectsData[key];
+
+      if (!data) return;
+
+      content.innerHTML = `
+        <div class="space-y-6 text-left">
+          <div class="relative rounded-2xl overflow-hidden aspect-video">
+            <img src="${data.image}" alt="${data.title}" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 bg-brand-black/80 backdrop-blur-md px-3 py-1 rounded-full text-brand-gold text-xs font-bold border border-brand-gold/30">
+              ${data.category}
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-2xl font-heading font-extrabold text-white">${data.title}</h3>
+            <p class="text-sm text-brand-muted">${data.description}</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
+              <p class="text-xs uppercase font-bold text-brand-gold">🎯 Défi / Problématique</p>
+              <p class="text-xs text-brand-subtle">${data.problem}</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
+              <p class="text-xs uppercase font-bold text-brand-gold">💡 Solution Apportée</p>
+              <p class="text-xs text-brand-subtle">${data.solution}</p>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <p class="text-xs uppercase font-bold text-brand-gold">📈 Résultats Obtenus :</p>
+            <ul class="space-y-1.5">
+              ${data.results.map(r => `<li class="text-xs text-white flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold"></i> ${r}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2">
+            ${data.tools.map(t => `<span class="text-xs px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold border border-brand-gold/30 font-medium">${t}</span>`).join('')}
+          </div>
+        </div>
+      `;
+
+      lucide.createIcons();
+      modal.classList.remove('hidden');
+    }
+
+    function closeProjectModal() {
+      document.getElementById('projectModal').classList.add('hidden');
+    }
+
+    // Open/Close Parcours Modal
+    function openParcoursModal() {
+      document.getElementById('parcoursModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+    function closeParcoursModal() {
+      document.getElementById('parcoursModal').classList.add('hidden');
+    }
+
+    // Open/Close CV Modal
+    function openCVModal() {
+      document.getElementById('cvModal').classList.remove('hidden');
+    }
+    function closeCVModal() {
+      document.getElementById('cvModal').classList.add('hidden');
+    }
+
+    // Contact Form Submission
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById('contactForm');
+      const toast = document.getElementById('toast');
+
+      toast.classList.remove('hidden');
+      form.reset();
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>
