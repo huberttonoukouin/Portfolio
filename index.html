@@ -49,79 +49,8 @@
     }
   </script>
 
-  <style>
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    /* Custom Scrollbar & Utility Styles */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0b0c10;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #2a2a35;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #ffc107;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .glass-card:hover {
-      border-color: rgba(255, 193, 7, 0.4);
-      background: rgba(255, 255, 255, 0.07);
-      box-shadow: 0 10px 30px -10px rgba(255, 193, 7, 0.2);
-    }
-
-    .glass-nav {
-      background: rgba(11, 12, 16, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #ffffff 0%, #ffc107 60%, #f5a623 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-glow {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(255, 193, 7, 0.15) 0%, rgba(11, 12, 16, 0) 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .modal-backdrop {
-      background: rgba(11, 12, 16, 0.85);
-      backdrop-filter: blur(8px);
-    }
-
-    /* Tooltip styles for floating actions */
-    .floating-btn-group .tooltip {
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-      transform: translateY(4px);
-    }
-    .floating-btn-group:hover .tooltip {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="bg-brand-black text-brand-muted font-sans antialiased selection:bg-brand-gold selection:text-black overflow-x-hidden">
@@ -867,123 +796,56 @@
 
   <!-- 6. SECTION CONTACT & FOOTER -->
   <section id="contact" class="py-24 bg-brand-black relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        <!-- Contact Information Column -->
-        <div class="lg:col-span-5 space-y-8">
-          
-          <div class="space-y-4">
-            <span class="text-brand-gold font-bold text-xs tracking-widest uppercase bg-brand-gold/10 px-4 py-1.5 rounded-full border border-brand-gold/20">
-              Travaillons Ensemble
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
-              Prêt à collaborer sur votre prochain projet ?
-            </h2>
-            <p class="text-base text-brand-subtle">
-              Une question, un besoin en analyse de données, en marketing digital, en création visuelle ou en développement web ? N'hésitez pas à me contacter directement.
-            </p>
-          </div>
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <span class="text-brand-gold font-bold text-xs tracking-widest uppercase bg-brand-gold/10 px-4 py-1.5 rounded-full border border-brand-gold/20">
+          Travaillons Ensemble
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+          Prêt à collaborer sur votre prochain projet ?
+        </h2>
+        <p class="text-base text-brand-subtle">
+          Une question, un besoin en analyse de données, en marketing digital, en création visuelle ou en développement web ? N'hésitez pas à me contacter directement.
+        </p>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight mx-auto rounded-full"></div>
+      </div>
 
-          <!-- Direct Contact Cards -->
-          <div class="space-y-4">
-            
-            <!-- Phone -->
-            <a href="tel:+22997150777" class="p-5 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
-                <i data-lucide="phone" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Téléphone & WhatsApp</p>
-                <p class="text-base font-bold text-white group-hover:text-brand-gold transition-colors">
-                  (+229) 97 15 07 77 / 95 69 89 47
-                </p>
-              </div>
-            </a>
+      <!-- Interactive Contact Form (Full Width) -->
+      <div class="bg-brand-card border border-white/10 p-8 sm:p-12 rounded-3xl shadow-2xl relative">
+        <h3 class="text-2xl font-heading font-extrabold text-white mb-6 text-center sm:text-left">
+          Envoyez-moi un message
+        </h3>
 
-            <!-- Email -->
-            <a href="mailto:huberttonoukouin@gmail.com" class="p-5 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
-                <i data-lucide="mail" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Adresse E-mail</p>
-                <p class="text-base font-bold text-white group-hover:text-brand-gold transition-colors">
-                  huberttonoukouin@gmail.com
-                </p>
-              </div>
-            </a>
-
-            <!-- Location -->
-            <div class="p-5 rounded-2xl bg-brand-card border border-white/10 flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center">
-                <i data-lucide="map-pin" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Localisation</p>
-                <p class="text-base font-bold text-white">
-                  Abomey-Calavi, Bénin
-                </p>
-              </div>
+        <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Votre Nom Complet</label>
+              <input type="text" required placeholder="Jean Dupont" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
             </div>
 
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/huberttsossou" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform">
-                <i data-lucide="linkedin" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <p class="text-xs text-brand-subtle uppercase tracking-wider font-semibold">Profil LinkedIn</p>
-                <p class="text-base font-bold text-white group-hover:text-brand-gold transition-colors">
-                  linkedin.com/in/huberttsossou
-                </p>
-              </div>
-            </a>
-
+            <div>
+              <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Votre Adresse Email</label>
+              <input type="email" required placeholder="jean.dupont@exemple.com" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
+            </div>
           </div>
 
-        </div>
-
-        <!-- Interactive Contact Form -->
-        <div class="lg:col-span-7">
-          <div class="bg-brand-card border border-white/10 p-8 sm:p-10 rounded-3xl shadow-2xl relative">
-            <h3 class="text-2xl font-heading font-extrabold text-white mb-6">
-              Envoyez-moi un message
-            </h3>
-
-            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Votre Nom Complet</label>
-                  <input type="text" required placeholder="Jean Dupont" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
-                </div>
-
-                <div>
-                  <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Votre Adresse Email</label>
-                  <input type="email" required placeholder="jean.dupont@exemple.com" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Sujet de votre message</label>
-                <input type="text" required placeholder="Opportunité de projet / Conseil Data & Marketing" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Message</label>
-                <textarea rows="5" required placeholder="Bonjour Hubert, je souhaiterais collaborer sur..." class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
-              </div>
-
-              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-extrabold text-base shadow-gold-sm hover:shadow-gold-glow hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
-                <i data-lucide="send" class="w-5 h-5"></i>
-                <span>Envoyer le Message</span>
-              </button>
-            </form>
-
+          <div>
+            <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Sujet de votre message</label>
+            <input type="text" required placeholder="Opportunité de projet / Conseil Data & Marketing" class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors">
           </div>
-        </div>
 
+          <div>
+            <label class="block text-xs font-semibold uppercase text-brand-subtle mb-2">Message</label>
+            <textarea rows="5" required placeholder="Bonjour Hubert, je souhaiterais collaborer sur..." class="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-brand-subtle/50 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-extrabold text-base shadow-gold-sm hover:shadow-gold-glow hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
+            <i data-lucide="send" class="w-5 h-5"></i>
+            <span>Envoyer le Message</span>
+          </button>
+        </form>
       </div>
 
     </div>
@@ -1132,188 +994,7 @@
   </div>
 
 
-  <!-- JAVASCRIPT LOGIC -->
-  <script>
-    // Configurable Hero Profile Image URL variable for easy swapping
-    const HERO_IMAGE_URL = 'assets/hero_portrait.jpg';
-    
-    // Apply dynamic hero portrait image source
-    document.addEventListener('DOMContentLoaded', () => {
-      const imgElement = document.getElementById('heroPortraitImg');
-      if (imgElement) {
-        imgElement.src = HERO_IMAGE_URL;
-      }
-    });
-
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Project Filtering Logic
-    function filterPortfolio(category) {
-      const cards = document.querySelectorAll('.project-card');
-      const buttons = document.querySelectorAll('.filter-btn');
-
-      buttons.forEach(btn => {
-        if (btn.getAttribute('data-category') === category) {
-          btn.className = 'filter-btn active px-6 py-2.5 rounded-full text-sm font-bold transition-all bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-gold-sm';
-        } else {
-          btn.className = 'filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-brand-card text-brand-muted hover:text-white border border-white/10 hover:border-brand-gold/40';
-        }
-      });
-
-      cards.forEach(card => {
-        if (category === 'all' || card.classList.contains(category)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Modal Data Definitions
-    const projectsData = {
-      powerbi: {
-        title: "Dashboard de Suivi de Performance Commerciale (Power BI / IWO GROUP)",
-        category: "Data Analysis & Business Intelligence",
-        image: "assets/project_powerbi.jpg",
-        description: "Centralisation et modélisation des flux de données de vente pour la direction générale et commerciale. Réduction des délais de reporting décisionnel.",
-        problem: "Données marchandes fragmentées sur plusieurs fichiers Excel sans vision consolidée des performances régionales.",
-        solution: "Modèle de données relationnel en étoile (Power BI + DAX), automatisant les flux d'intégration et générant des KPI dynamiques.",
-        results: ["-65% de temps passé sur la création des rapports mensuels", "Détection en temps réel des produits leaders et sous-performants", "Adoption par l'équipe commerciale et de gestion"],
-        tools: ["Power BI", "DAX", "SQL Server", "Excel Avancé"]
-      },
-      nlp: {
-        title: "Modèle Machine Learning & Traitement NLP (EPITECH Bénin)",
-        category: "Data Analyse & Intelligence Artificielle",
-        image: "assets/project_ml_nlp.jpg",
-        description: "Conception d'une chaîne algorithmique d'analyse textuelle pour la catégorisation automatique et l'extraction de sentiments.",
-        problem: "Nécessité de traiter et classer de grands volumes de retours textuels clients non structurés.",
-        solution: "Prétraitement NLP (tokenisation, TF-IDF/embeddings) suivi d'un modèle d'apprentissage supervisé (Scikit-learn).",
-        results: ["Précision du modèle supérieure à 92%", "Automatisation du tri des feedbacks négatifs/positifs", "Projet salué lors du cursus EPITECH"],
-        tools: ["Python", "Scikit-Learn", "NLTK / Pandas", "Jupyter"]
-      },
-      marketing: {
-        title: "Stratégie d'Acquisition & Campagnes Campus (+45% d'engagement)",
-        category: "Marketing Digital & Stratégie Omnicanale",
-        image: "assets/project_marketing.jpg",
-        description: "Déploiement d'un plan de communication et d'acquisition de prospects pour booster la visibilité des programmes de formation.",
-        problem: "Manque d'engagement sur les canaux sociaux et faible taux de conversion des formulaires de prospects.",
-        solution: "Repensée complète du tunnel de conversion, création de contenus engageants et campagnes ciblées multi-canaux.",
-        results: ["+45% d'engagement global sur les réseaux sociaux", "+30% de prospects qualifiés inscrits", "Optimisation du coût par acquisition (CPA)"],
-        tools: ["Copywriting", "Meta Ads Manager", "Google Analytics", "Funnels"]
-      },
-      design: {
-        title: "Conception de Supports Multimédia & Intégration Web",
-        category: "Design Graphique & Développement Web",
-        image: "assets/project_design_video.jpg",
-        description: "Réalisation de l'identité visuelle de campagnes événementielles, création d'affiches grand format, intégration web et montage de capsules vidéo.",
-        problem: "Besoin de visuels à fort impact et d'une présence web fluide pour capter l'attention.",
-        solution: "Charte graphique moderne, déclinaisons multiformats, intégration web WordPress/responsive et motion design dynamique.",
-        results: ["Forte valorisation de l'image de marque", "Format vidéo court à haut taux de rétention", "Interface web fluide et 100% responsive"],
-        tools: ["WordPress", "Photoshop", "Illustrator", "Premiere Pro", "HTML/CSS"]
-      }
-    };
-
-    // Open Project Modal
-    function openProjectModal(key) {
-      const modal = document.getElementById('projectModal');
-      const content = document.getElementById('modalContent');
-      const data = projectsData[key];
-
-      if (!data) return;
-
-      content.innerHTML = `
-        <div class="space-y-6 text-left">
-          <div class="relative rounded-2xl overflow-hidden aspect-video">
-            <img src="${data.image}" alt="${data.title}" class="w-full h-full object-cover">
-            <div class="absolute top-3 left-3 bg-brand-black/80 backdrop-blur-md px-3 py-1 rounded-full text-brand-gold text-xs font-bold border border-brand-gold/30">
-              ${data.category}
-            </div>
-          </div>
-
-          <div class="space-y-3">
-            <h3 class="text-2xl font-heading font-extrabold text-white">${data.title}</h3>
-            <p class="text-sm text-brand-muted">${data.description}</p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
-              <p class="text-xs uppercase font-bold text-brand-gold">🎯 Défi / Problématique</p>
-              <p class="text-xs text-brand-subtle">${data.problem}</p>
-            </div>
-            <div class="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
-              <p class="text-xs uppercase font-bold text-brand-gold">💡 Solution Apportée</p>
-              <p class="text-xs text-brand-subtle">${data.solution}</p>
-            </div>
-          </div>
-
-          <div class="space-y-2">
-            <p class="text-xs uppercase font-bold text-brand-gold">📈 Résultats Obtenus :</p>
-            <ul class="space-y-1.5">
-              ${data.results.map(r => `<li class="text-xs text-white flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold"></i> ${r}</li>`).join('')}
-            </ul>
-          </div>
-
-          <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2">
-            ${data.tools.map(t => `<span class="text-xs px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold border border-brand-gold/30 font-medium">${t}</span>`).join('')}
-          </div>
-        </div>
-      `;
-
-      lucide.createIcons();
-      modal.classList.remove('hidden');
-    }
-
-    function closeProjectModal() {
-      document.getElementById('projectModal').classList.add('hidden');
-    }
-
-    // Open/Close Parcours Modal
-    function openParcoursModal() {
-      document.getElementById('parcoursModal').classList.remove('hidden');
-      lucide.createIcons();
-    }
-    function closeParcoursModal() {
-      document.getElementById('parcoursModal').classList.add('hidden');
-    }
-
-    // Open/Close CV Modal
-    function openCVModal() {
-      document.getElementById('cvModal').classList.remove('hidden');
-    }
-    function closeCVModal() {
-      document.getElementById('cvModal').classList.add('hidden');
-    }
-
-    // Contact Form Submission
-    function handleContactSubmit(event) {
-      event.preventDefault();
-      const form = document.getElementById('contactForm');
-      const toast = document.getElementById('toast');
-
-      toast.classList.remove('hidden');
-      form.reset();
-
-      setTimeout(() => {
-        toast.classList.add('hidden');
-      }, 4000);
-    }
-  </script>
-
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
 </body>
 </html>
