@@ -1,417 +1,317 @@
 /**
- * Portfolio Hubert Sossou Tonoukouin
- * Community Manager & Spécialiste Marketing Digital
- * Luxury Editorial JavaScript Engine
+ * ==========================================================================
+ * PORTFOLIO OFFICIEL - HUBERT SOSSOU TONOUKOUIN
+ * Logique Interactive, Filtrage & Accordion Responsive
+ * ==========================================================================
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Lucide Icons
+  // 1. Initialisation des icônes vectorielles Lucide
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }
 
-  // 2. Mobile Menu Management
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
-  const menuIconOpen = document.getElementById('menuIconOpen');
-  const menuIconClose = document.getElementById('menuIconClose');
+  // 2. Année dynamique
+  initCurrentYear();
 
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      if (isHidden) {
-        mobileMenu.classList.remove('hidden');
-        if (menuIconOpen && menuIconClose) {
-          menuIconOpen.classList.add('hidden');
-          menuIconClose.classList.remove('hidden');
-        }
-      } else {
-        mobileMenu.classList.add('hidden');
-        if (menuIconOpen && menuIconClose) {
-          menuIconOpen.classList.remove('hidden');
-          menuIconClose.classList.add('hidden');
-        }
-      }
-    });
+  // 3. Header Sticky & Ombre au scroll
+  initScrollHeader();
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        if (menuIconOpen && menuIconClose) {
-          menuIconOpen.classList.remove('hidden');
-          menuIconClose.classList.add('hidden');
-        }
-      });
-    });
-  }
+  // 4. Menu mobile
+  initMobileNav();
 
-  // 3. Header Scroll Effect
-  const header = document.getElementById('mainHeader');
-  window.addEventListener('scroll', () => {
-    if (header) {
-      if (window.scrollY > 40) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }
+  // 5. Espion de défilement (Scrollspy)
+  initScrollSpy();
 
-    // Back to top visibility
-    const backToTop = document.getElementById('backToTop');
-    if (backToTop) {
-      if (window.scrollY > 450) {
-        backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-        backToTop.classList.add('opacity-100', 'translate-y-0');
-      } else {
-        backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-        backToTop.classList.remove('opacity-100', 'translate-y-0');
-      }
-    }
-  });
+  // 6. Accordion des 5 Entités Phares
+  initAccordion();
 
-  // 4. Animate KPI numbers on viewport entrance
-  initKpiCounters();
+  // 7. Filtres de la Galerie de Créations
+  initGalleryFilter();
 
-  // 5. Portfolio Filter Tabs
-  initPortfolioFilters();
+  // 8. Modal d'aperçu pour les créations et vidéos
+  initMediaModal();
 
-  // 6. Contact Form Handler
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', handleContactSubmit);
-  }
-
-  // 7. Modal Escape Key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeProjectModal();
-    }
-  });
+  // 9. Gestionnaire du Formulaire de Contact
+  initContactForm();
 });
 
-// Smooth Scroll to Top
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+/* --------------------------------------------------------------------------
+ * 2. Année Dynamique
+ * -------------------------------------------------------------------------- */
+function initCurrentYear() {
+  const el = document.getElementById('currentYear');
+  if (el) {
+    el.textContent = new Date().getFullYear();
+  }
 }
 
-// KPI Count-Up Animation
-function initKpiCounters() {
-  const kpiSection = document.getElementById('accueil') || document.getElementById('about');
-  if (!kpiSection) return;
+/* --------------------------------------------------------------------------
+ * 3. Header Sticky & Ombre
+ * -------------------------------------------------------------------------- */
+function initScrollHeader() {
+  const header = document.getElementById('mainHeader');
+  if (!header) return;
 
-  let animated = false;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        animated = true;
-        animateAllCounters();
-      }
-    });
-  }, { threshold: 0.15 });
-
-  observer.observe(kpiSection);
-}
-
-function animateAllCounters() {
-  const counters = document.querySelectorAll('.kpi-counter');
-  counters.forEach(counter => {
-    const target = parseFloat(counter.getAttribute('data-target'));
-    const prefix = counter.getAttribute('data-prefix') || '';
-    const suffix = counter.getAttribute('data-suffix') || '';
-    const duration = 1800;
-    const start = 0;
-    const startTime = performance.now();
-
-    function updateCounter(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(start + (target - start) * ease);
-
-      if (counter.getAttribute('data-formatted') === 'comma') {
-        counter.textContent = prefix + current.toLocaleString('fr-FR') + suffix;
-      } else {
-        counter.textContent = prefix + current + suffix;
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(updateCounter);
-      } else {
-        const finalVal = counter.getAttribute('data-final-text');
-        if (finalVal) {
-          counter.textContent = finalVal;
-        }
-      }
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
-
-    requestAnimationFrame(updateCounter);
-  });
+  }, { passive: true });
 }
 
-// Portfolio Filter Tabs
-function initPortfolioFilters() {
-  const tabButtons = document.querySelectorAll('.portfolio-tab');
-  const projectCards = document.querySelectorAll('.project-item');
+/* --------------------------------------------------------------------------
+ * 4. Menu Mobile
+ * -------------------------------------------------------------------------- */
+function initMobileNav() {
+  const toggleBtn = document.getElementById('mobileToggleBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+  if (!toggleBtn || !mobileNav) return;
 
-      const filter = button.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.classList.remove('hidden');
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 20);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          setTimeout(() => {
-            card.classList.add('hidden');
-          }, 200);
-        }
-      });
-    });
-  });
-}
-
-// Showroom Realizations Detailed Data
-const realizationsData = {
-  ima: {
-    badge: "Création Vidéo & Multi-Campus",
-    title: "Campagnes Vidéo & Reels Multi-Campus",
-    client: "Institut du Multimédia Appliqué (IMA)",
-    role: "Community Manager Principal (Depuis Octobre 2025)",
-    tagline: "Rythme soutenu de 5 publications/jour et couverture dynamique sur 6 campus",
-    problem: "Nécessité de dynamiser la visibilité de l'institut et de fédérer les communautés étudiantes réparties sur 6 campus distincts avec des formats engageants, modernes et consommables en mobilité.",
-    solution: "Mise en place d'une chaîne de production vidéo ultra-rapide (CapCut, Premiere Pro, tournage smartphone haute définition), création de formats récurrents (micro-trottoirs, présentations des filières, coulisses des cours, interviews alumni) et diffusion multi-plateformes temps réel (TikTok, Instagram Reels, Facebook Reels, YouTube Shorts).",
-    kpis: [
-      { label: "Vidéos produites & montées de A à Z", value: "100+" },
-      { label: "Fréquence de diffusion", value: "5 posts / jour" },
-      { label: "Périmètre géographique", value: "6 Campus" },
-      { label: "Portée cumulée", value: "Forte viralité locale" }
-    ],
-    tools: ["CapCut", "Clipchamp", "TikTok Studio", "Meta Business Suite", "Canva", "WhatsApp Direct"]
-  },
-  iwo: {
-    badge: "Growth B2B & Lead Generation",
-    title: "Stratégie Growth & Carrousels B2B",
-    client: "IWO GROUP SARL (Éditeur SaaS & Solutions)",
-    role: "Lead Communication & Marketing (Depuis 2023)",
-    tagline: "Explosion de la visibilité LinkedIn de 200 à près de 3 000 abonnés ciblés B2B",
-    problem: "Page entreprise LinkedIn embryonnaire (200 abonnés) avec un très faible taux de transformation vers les solutions logicielles de l'entreprise, sans calendrier éditorial structuré.",
-    solution: "Définition d'une ligne éditoriale axée sur l'expertise métier, conception de carrousels pédagogiques haute valeur ajoutée, copywriting persuasif (framework AIDA & PAS), storytelling de la direction et mise en place de campagnes d'emailing automatisées avec Brevo & HubSpot.",
-    kpis: [
-      { label: "Croissance de l'audience LinkedIn", value: "+1 385%" },
-      { label: "Progression abonnés", value: "200 ➔ ~3 000" },
-      { label: "Engagement moyen / post", value: "x4.2" },
-      { label: "Génération de leads SaaS", value: "+180% demandes démo" }
-    ],
-    tools: ["LinkedIn Campaign Manager", "Photoshop", "Illustrator", "Brevo", "HubSpot", "Google Analytics"]
-  },
-  jve: {
-    badge: "Engagement Communautaire & Plaidoyer",
-    title: "Campagnes de Sensibilisation & Rapports d'Activité",
-    client: "ONG JVE Bénin (Jeunes Volontaires pour l'Environnement)",
-    role: "Community Manager & Responsable Membership (2018 - 2021)",
-    tagline: "Gain de 1 500 abonnés qualifiés en 4 mois et digitalisation des rapports d'impact",
-    problem: "Sensibiliser un public jeune aux enjeux de la transition écologique et du climat tout en mobilisant de nouveaux volontaires et membres actifs à travers le territoire national.",
-    solution: "Organisation de challenges communautaires, lives thématiques, couverture en direct d'ateliers de terrain, et conception graphique de rapports d'activité impactants et infographies facilement partageables.",
-    kpis: [
-      { label: "Croissance express abonnés", value: "3 500 ➔ 5 000" },
-      { label: "Délai de réalisation", value: "4 Mois seulement" },
-      { label: "Recrutement de membres", value: "+220 volontaires" },
-      { label: "Taux d'interaction communautaire", value: "+60%" }
-    ],
-    tools: ["Meta Business Suite", "Canva", "Trello", "Photoshop", "Live Event Coverage"]
-  },
-  seo: {
-    badge: "SEO Local & Conversion",
-    title: "Rédaction SEO & Fiches Google Optimisées",
-    client: "SemJuice France / Ogmius Oueb / Multi-clients",
-    role: "Rédacteur Web SEO & Spécialiste Référencement (2022)",
-    tagline: "Domination des requêtes locales et optimisation sémantique à haute conversion",
-    problem: "Visibilité locale invisible sur Google Maps et faible positionnement naturel sur les requêtes à forte intention commerciale dans des marchés concurrentiels.",
-    solution: "Audit de mots-clés transactionnels, optimisation sémantique intégrale des pages web (balises title, Hn, méta descriptions, cocons sémantiques) et optimisation stratégique des fiches Google Business Profile (avis clients, posts d'actualité, géociblage).",
-    kpis: [
-      { label: "Top 3 Google sur requêtes cibles", value: "+75% requêtes" },
-      { label: "Appels & itinéraires générés", value: "+110%" },
-      { label: "Taux de clic organique (CTR)", value: "+38%" },
-      { label: "Objectifs mensuels clients", value: "260% atteints" }
-    ],
-    tools: ["Google Business Profile", "Google Analytics", "WordPress", "Outils Sémantiques", "Excel Avancé"]
-  }
-};
-
-// Open Project Modal
-function openProjectModal(key) {
-  const modal = document.getElementById('projectModal');
-  const modalBody = document.getElementById('modalContent');
-  const data = realizationsData[key];
-
-  if (!modal || !modalBody || !data) return;
-
-  modalBody.innerHTML = `
-    <div class="space-y-6 text-left">
-      <!-- Modal Top Header -->
-      <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#c48956]/20">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-[#c48956] bg-[#c48956]/10 border border-[#c48956]/30">
-          ${data.badge}
-        </span>
-        <span class="text-xs text-[#bdafa3] font-medium">${data.role}</span>
-      </div>
-
-      <!-- Title & Tagline -->
-      <div class="space-y-2">
-        <h3 class="text-2xl sm:text-3xl font-serif-luxury font-bold text-[#f5ede4] leading-snug">
-          ${data.title}
-        </h3>
-        <p class="text-xs sm:text-sm font-semibold text-[#c48956]">
-          Client / Cadre d'intervention : <span class="text-[#ebdcd0] font-normal">${data.client}</span>
-        </p>
-        <p class="text-sm sm:text-base text-[#bdafa3] font-normal leading-relaxed">
-          ${data.tagline}
-        </p>
-      </div>
-
-      <!-- Grid Problem & Solution -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
-        <!-- Problem -->
-        <div class="p-5 rounded-2xl bg-[#170f0b] border border-[#c48956]/15 space-y-2">
-          <div class="flex items-center gap-2 text-[#c48956]">
-            <i data-lucide="alert-circle" class="w-4 h-4"></i>
-            <h4 class="text-xs font-bold uppercase tracking-wider text-[#f5ede4]">Le Défi Initial</h4>
-          </div>
-          <p class="text-xs sm:text-sm text-[#bdafa3] leading-relaxed font-normal">
-            ${data.problem}
-          </p>
-        </div>
-
-        <!-- Solution -->
-        <div class="p-5 rounded-2xl bg-[#170f0b] border border-[#c48956]/15 space-y-2">
-          <div class="flex items-center gap-2 text-[#c48956]">
-            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
-            <h4 class="text-xs font-bold uppercase tracking-wider text-[#f5ede4]">La Solution Déployée</h4>
-          </div>
-          <p class="text-xs sm:text-sm text-[#bdafa3] leading-relaxed font-normal">
-            ${data.solution}
-          </p>
-        </div>
-      </div>
-
-      <!-- Impact Metrics -->
-      <div class="p-5 rounded-2xl bg-[#170f0b] border border-[#c48956]/20 space-y-4">
-        <h4 class="text-xs font-bold uppercase tracking-wider text-[#c48956] flex items-center gap-2">
-          <i data-lucide="trending-up" class="w-4 h-4"></i>
-          Résultats & Impact Mesuré
-        </h4>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          ${data.kpis.map(kpi => `
-            <div class="p-3.5 rounded-xl bg-[#120b08] border border-[#c48956]/15 text-center">
-              <p class="text-lg sm:text-xl font-serif-luxury font-bold text-[#c48956]">${kpi.value}</p>
-              <p class="text-[10px] sm:text-xs text-[#8a7b70] font-medium uppercase mt-1 leading-tight">${kpi.label}</p>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Tools Used -->
-      <div class="space-y-2 pt-2">
-        <p class="text-xs font-bold uppercase tracking-wider text-[#8a7b70]">Outils & Leviers Mobilisés :</p>
-        <div class="flex flex-wrap gap-2">
-          ${data.tools.map(tool => `
-            <span class="px-3 py-1 rounded-lg bg-[#241610] border border-[#c48956]/25 text-xs text-[#ebdcd0] font-medium">
-              ${tool}
-            </span>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Modal Footer Action -->
-      <div class="pt-4 border-t border-[#c48956]/20 flex flex-wrap items-center justify-between gap-4">
-        <p class="text-xs text-[#8a7b70]">Besoin d'un résultat similaire pour votre entreprise ?</p>
-        <a href="#contact" onclick="closeProjectModal()" class="px-5 py-2.5 rounded-lg btn-camel-solid text-xs font-bold uppercase tracking-wider flex items-center gap-2">
-          <span>Discuter d'un projet</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-    </div>
-  `;
-
-  modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
-}
-
-// Close Project Modal
-function closeProjectModal() {
-  const modal = document.getElementById('projectModal');
-  if (modal) {
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  }
-}
-
-// Contact Form Submission Handler
-function handleContactSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const submitBtn = document.getElementById('contactSubmitBtn');
-  const toast = document.getElementById('contactToast');
-
-  if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `
-      <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-      </svg>
-      <span>Envoi en cours...</span>
-    `;
-  }
-
-  setTimeout(() => {
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = `
-        <i data-lucide="check" class="w-4 h-4"></i>
-        <span>Message Envoyé !</span>
-      `;
+  function toggleMenu(forceClose = false) {
+    const isOpen = forceClose ? true : mobileNav.classList.contains('open');
+    if (isOpen) {
+      mobileNav.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.innerHTML = '<i data-lucide="menu"></i>';
+    } else {
+      mobileNav.classList.add('open');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      toggleBtn.innerHTML = '<i data-lucide="x"></i>';
     }
-
-    if (toast) {
-      toast.classList.remove('hidden');
-      toast.classList.add('flex');
-    }
-
-    form.reset();
-
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
+  }
 
-    setTimeout(() => {
-      if (submitBtn) {
-        submitBtn.innerHTML = `
-          <i data-lucide="send" class="w-4 h-4"></i>
-          <span>Envoyer mon message</span>
-        `;
+  toggleBtn.addEventListener('click', () => toggleMenu());
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(true));
+  });
+
+  document.addEventListener('click', (e) => {
+    if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleMenu(true);
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+ * 5. ScrollSpy (Lien actif selon la position de lecture)
+ * -------------------------------------------------------------------------- */
+function initScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+
+  if (!sections.length || !navLinks.length) return;
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollPosition = window.scrollY + 120;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
       }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }, { passive: true });
+}
+
+/* --------------------------------------------------------------------------
+ * 6. Accordion Interactif des 5 Entités Phares
+ * -------------------------------------------------------------------------- */
+function initAccordion() {
+  const accordionContainer = document.getElementById('entitiesAccordion');
+  if (!accordionContainer) return;
+
+  const items = accordionContainer.querySelectorAll('.accordion-item');
+
+  items.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    if (!header) return;
+
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Fermer tous les autres éléments
+      items.forEach(otherItem => {
+        otherItem.classList.remove('active');
+      });
+
+      // Si l'élément cliqué n'était pas ouvert, l'ouvrir
+      if (!isActive) {
+        item.classList.add('active');
+      }
+
+      // Réactualiser les icônes lucide si nécessaire
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
       }
-    }, 4000);
-  }, 1200);
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+ * 7. Filtres de la Galerie de Créations
+ * -------------------------------------------------------------------------- */
+function initGalleryFilter() {
+  const filterBtns = document.querySelectorAll('.filter-tab-btn');
+  const galleryCards = document.querySelectorAll('.gallery-card, .reel-card');
+
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Activer l'onglet sélectionné
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      galleryCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filterValue === 'all' || category === filterValue) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+ * 8. Modal Médias (Aperçu Image & Vidéo)
+ * -------------------------------------------------------------------------- */
+function initMediaModal() {
+  const modal = document.getElementById('mediaModal');
+  const modalContent = document.getElementById('mediaModalContent');
+  const closeBtn = document.getElementById('modalCloseBtn');
+  const clickableItems = document.querySelectorAll('.gallery-card, .reel-card, .preview-media-card');
+
+  if (!modal || !modalContent) return;
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modalContent.innerHTML = '';
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  clickableItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      const title = item.getAttribute('data-title') || item.querySelector('.gallery-card-title, .reel-caption, .preview-badge-label')?.textContent || 'Aperçu du Projet';
+      const desc = item.getAttribute('data-desc') || 'Projet réalisé par Hubert SOSSOU TONOUKOUIN dans le cadre de ses missions en stratégie digitale et analyse de données.';
+
+      if (!img) return;
+
+      modalContent.innerHTML = `
+        <div style="margin-bottom: 1.25rem; border-radius: 12px; overflow: hidden; background-color: #0F172A;">
+          <img src="${img.src}" alt="${title}" style="width: 100%; max-height: 480px; object-fit: contain; display: block; margin: 0 auto;">
+        </div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 0.5rem;">${title}</h3>
+        <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">${desc}</p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="#contact" class="btn btn-primary btn-sm" onclick="document.getElementById('mediaModal').classList.remove('open')">
+            Discuter d'un projet similaire
+          </a>
+          <a href="https://wa.me/2290197150777" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            Échanger sur WhatsApp
+          </a>
+        </div>
+      `;
+
+      modal.classList.add('open');
+
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+ * 9. Gestionnaire du Formulaire de Contact
+ * -------------------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  const successAlert = document.getElementById('formSuccessAlert');
+  const errorAlert = document.getElementById('formErrorAlert');
+  const submitBtn = document.getElementById('submitContactBtn');
+
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = form.elements['name']?.value.trim();
+    const email = form.elements['email']?.value.trim();
+    const subject = form.elements['subject']?.value.trim();
+    const message = form.elements['message']?.value.trim();
+
+    // Validation basique
+    if (!name || !email || !subject || !message || message.length < 5) {
+      if (errorAlert) {
+        errorAlert.style.display = 'block';
+        if (successAlert) successAlert.style.display = 'none';
+      }
+      return;
+    }
+
+    if (errorAlert) errorAlert.style.display = 'none';
+
+    // Simulation de chargement
+    if (submitBtn) {
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Envoi en cours...</span>';
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        if (successAlert) {
+          successAlert.style.display = 'block';
+        }
+        form.reset();
+
+        // Réactualiser les icônes
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+
+        setTimeout(() => {
+          if (successAlert) successAlert.style.display = 'none';
+        }, 6000);
+      }, 700);
+    }
+  });
 }
