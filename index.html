@@ -1,1577 +1,996 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
-
+<html lang="fr" class="scroll-smooth" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hubert Sossou Tonoukouin | Community Manager, Marketing Digital & Vidéo</title>
-  <meta name="description"
-    content="Portfolio de Hubert Sossou Tonoukouin - Community Manager et Spécialiste en Marketing Digital. Expert en création vidéo, stratégie de croissance B2B, pilotage data-driven et gestion de communautés.">
-  <meta name="author" content="Hubert Sossou Tonoukouin">
-
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Hubert Sossou Tonoukouin | Portfolio Professionnel">
-  <meta property="og:description"
-    content="Stratège Digital, Community Manager & Vidéaste. Donnez de la voix à votre marque et engagez vos communautés.">
+  
+  <title>Hubert SOSSOU TONOUKOUIN — 8 ans de communication digitale, pilotés par la donnée</title>
+  <meta name="description" content="Portfolio officiel de Hubert SOSSOU TONOUKOUIN : Statisticien-Économètre, Data Analyste et Spécialiste Marketing Digital. 8 ans de communication digitale, pilotés par la donnée.">
+  <meta name="author" content="Hubert SOSSOU TONOUKOUIN">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hubert SOSSOU TONOUKOUIN — Portfolio Communication & Data">
+  <meta property="og:description" content="Du suivi statistique à la stratégie de contenu : réseaux sociaux, campagnes, vidéo et reporting.">
   <meta property="og:type" content="website">
-
-  <!-- Google Fonts: Luxury High-Contrast Serifs & Clean Editorial Sans -->
+  <meta property="og:image" content="assets/hero_profile_showcase.png">
+  
+  <!-- Typographie Google Fonts : Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- Lucide Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icônes vectorielles Lucide -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Tailwind CSS via CDN with Luxury Dark Chocolate & Amber Theme -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              chocolate: '#120b08',
-              espresso: '#170f0b',
-              surface: '#1d130e',
-              card: '#22150e',
-              camel: '#c48956',
-              camelHover: '#d69864',
-              bronze: '#a86c3d',
-              gold: '#d8a068',
-              ivory: '#f5ede4',
-              cream: '#ebdcd0',
-              muted: '#bdafa3',
-              subtle: '#8a7b70'
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
-            editorial: ['"Cormorant Garamond"', 'serif']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Custom Stylesheet -->
+  
+  <!-- Feuille de styles sur mesure (Mode Clair & Mode Sombre) -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body
-  class="bg-[#120b08] text-[#ebdcd0] font-sans antialiased overflow-x-hidden selection:bg-[#c48956] selection:text-white">
-
-  <!-- AMBIENT WARM GLOWS -->
-  <div class="hero-glow-warm top-0 left-1/4 -translate-x-1/2"></div>
-  <div class="hero-glow-amber top-1/3 right-0"></div>
-  <div class="hero-glow-warm bottom-1/4 left-0"></div>
-
-  <!-- FLOATING QUICK ACTIONS (WHATSAPP & CONTACT) -->
-  <div class="fixed bottom-6 left-6 z-50 flex items-center gap-3">
-    <!-- WhatsApp Direct -->
-    <div class="relative floating-btn-group">
-      <a href="https://wa.me/2290197150777?text=Bonjour%20Hubert,%20j'ai%20consulté%20votre%20portfolio%20et%20je%20souhaite%20échanger%20avec%20vous."
-        target="_blank" rel="noopener noreferrer" aria-label="Discuter sur WhatsApp"
-        class="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#20140e] border border-[#c48956]/40 hover:border-[#c48956] text-[#c48956] hover:text-white hover:bg-[#b57948] flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-all">
-        <i data-lucide="message-circle" class="w-5 h-5"></i>
-      </a>
-      <span
-        class="tooltip absolute bottom-full left-0 mb-2 px-3 py-1.5 bg-[#1a100b] border border-[#c48956]/30 text-[#f5ede4] text-xs font-semibold rounded-lg shadow-xl whitespace-nowrap">
-        WhatsApp Direct : (+229) 01 97 15 07 77
-      </span>
-    </div>
-
-    <!-- Quick Mail -->
-    <div class="relative floating-btn-group">
-      <a href="mailto:huberttonoukouin@gmail.com?subject=Prise%20de%20Contact%20-%20Portfolio"
-        aria-label="Envoyer un e-mail"
-        class="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#b57948] hover:bg-[#c98a58] text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all">
-        <i data-lucide="mail" class="w-5 h-5"></i>
-      </a>
-      <span
-        class="tooltip absolute bottom-full left-0 mb-2 px-3 py-1.5 bg-[#1a100b] border border-[#c48956]/30 text-[#f5ede4] text-xs font-semibold rounded-lg shadow-xl whitespace-nowrap">
-        huberttonoukouin@gmail.com
-      </span>
-    </div>
-  </div>
-
-  <!-- FLOATING BACK TO TOP BUTTON -->
-  <button id="backToTop" onclick="scrollToTop()" aria-label="Retour en haut"
-    class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-[#1e140e]/90 hover:bg-[#b57948] text-[#c48956] hover:text-white border border-[#c48956]/30 flex items-center justify-center shadow-xl opacity-0 pointer-events-none translate-y-4 transition-all duration-300">
-    <i data-lucide="chevron-up" class="w-5 h-5"></i>
-  </button>
-
+<body>
 
   <!-- =========================================================================
-       [HEADER / TOP NAVIGATION - MATCHING SCREENSHOT EMBLEM & SPACING]
+       NAVIGATION GLOBALE (STICKY)
        ========================================================================= -->
-  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-40 luxury-nav">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-24 flex items-center justify-between">
-
-      <!-- Brand Emblem Logo (Star in Circle matching screenshot) -->
-      <a href="#accueil" class="flex items-center gap-3.5 group">
-        <div
-          class="relative flex items-center justify-center w-11 h-11 text-[#c48956] group-hover:scale-105 transition-transform">
-          <!-- Artistic Star-Circle SVG emblem matching screenshot -->
-          <svg class="w-10 h-10" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"
-              opacity="0.6" />
-            <circle cx="24" cy="24" r="17.5" stroke="currentColor" stroke-width="1.6" />
-            <polygon
-              points="24,9.5 27.8,18.5 37.5,18.5 29.8,24.2 32.8,33.5 24,28 15.2,33.5 18.2,24.2 10.5,18.5 20.2,18.5"
-              fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-            <circle cx="24" cy="24" r="2.8" fill="currentColor" />
-          </svg>
-        </div>
-        <div class="hidden sm:flex flex-col">
-          <span class="font-serif text-[#f5ede4] text-base tracking-wide font-medium">
-            HUBERT <span class="text-[#c48956]">TONOUKOUIN</span>
-          </span>
-          <span class="text-[10px] text-[#8a7b70] uppercase tracking-[0.2em]">
-            Community Manager & Marketing
-          </span>
-        </div>
+  <header id="mainHeader" class="site-header" role="banner">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo Identique à la Maquette -->
+      <a href="#accueil" class="brand-identity" aria-label="Portfolio Hubert SOSSOU TONOUKOUIN">
+        <span class="brand-name">portfolio<span class="brand-dot"> . </span>digital</span>
       </a>
 
-      <!-- Desktop Navigation Links (Uppercase, spaced, cream font matching screenshot) -->
-      <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-[0.18em] text-[#bdafa3]">
-        <a href="#apropos" class="hover:text-[#f5ede4] hover:text-[#c48956] transition-colors py-1">QUI SUIS-JE ?</a>
-        <a href="#realisations" class="hover:text-[#f5ede4] hover:text-[#c48956] transition-colors py-1">FILMOGRAPHY</a>
-        <a href="#competences" class="hover:text-[#f5ede4] hover:text-[#c48956] transition-colors py-1">EXPERTISE</a>
-        <a href="#experiences" class="hover:text-[#f5ede4] hover:text-[#c48956] transition-colors py-1">CAREER</a>
-        <a href="#avis" class="hover:text-[#f5ede4] hover:text-[#c48956] transition-colors py-1">REVIEWS</a>
-        <a href="#contact" class="hover:text-[#f5ede4] hover:text-[#c48956] transition-colors py-1">CONTACT ME</a>
+      <!-- Menu Principal Desktop -->
+      <nav class="nav-menu-wrapper" role="navigation" aria-label="Menu principal">
+        <ul class="nav-menu">
+          <li><a href="#accueil" class="nav-link active" data-i18n="nav_profil">Profil</a></li>
+          <li><a href="#parcours" class="nav-link" data-i18n="nav_parcours">Parcours</a></li>
+          <li><a href="#projets" class="nav-link" data-i18n="nav_projets">Projets</a></li>
+          <li><a href="#competences" class="nav-link" data-i18n="nav_competences">Compétences</a></li>
+          <li><a href="#realisations" class="nav-link" data-i18n="nav_realisations">Réalisations</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contacts">Contacts</a></li>
+        </ul>
       </nav>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn"
-        class="lg:hidden p-2 rounded-lg text-[#ebdcd0] hover:text-white bg-[#1d130e] border border-[#c48956]/30 transition-colors"
-        aria-label="Ouvrir le menu">
-        <i id="menuIconOpen" data-lucide="menu" class="w-6 h-6"></i>
-        <i id="menuIconClose" data-lucide="x" class="w-6 h-6 hidden"></i>
-      </button>
+      <!-- Contrôles d'Action (Thème Clair/Sombre, Traduction FR/EN, CTA) -->
+      <div class="nav-actions-group">
+        
+        <!-- Bouton Bascule Thème Sombre / Clair -->
+        <button id="themeToggleBtn" class="header-control-btn" aria-label="Basculer le thème clair/sombre" title="Basculer le mode clair / sombre">
+          <i data-lucide="moon" id="themeIcon" style="width: 16px; height: 16px;"></i>
+          <span id="themeLabel">Mode</span>
+        </button>
 
-    </div>
+        <!-- Bouton Traduction FR / EN -->
+        <button id="langToggleBtn" class="header-control-btn" aria-label="Traduire le site en anglais ou français" title="Changer de langue (FR / EN)">
+          <i data-lucide="globe" style="width: 15px; height: 15px;"></i>
+          <span id="langLabel">EN</span>
+        </button>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu"
-      class="hidden lg:hidden bg-[#170f0b]/98 border-b border-[#c48956]/20 px-6 py-6 space-y-3 shadow-2xl backdrop-blur-2xl">
-      <a href="#accueil"
-        class="mobile-link block text-xs font-semibold uppercase tracking-widest text-[#ebdcd0] hover:text-[#c48956] py-2 border-b border-[#c48956]/10">
-        Accueil
-      </a>
-      <a href="#apropos"
-        class="mobile-link block text-xs font-semibold uppercase tracking-widest text-[#ebdcd0] hover:text-[#c48956] py-2 border-b border-[#c48956]/10">
-        About Me (À propos)
-      </a>
-      <a href="#realisations"
-        class="mobile-link block text-xs font-semibold uppercase tracking-widest text-[#ebdcd0] hover:text-[#c48956] py-2 border-b border-[#c48956]/10">
-        Filmography (Réalisations)
-      </a>
-      <a href="#competences"
-        class="mobile-link block text-xs font-semibold uppercase tracking-widest text-[#ebdcd0] hover:text-[#c48956] py-2 border-b border-[#c48956]/10">
-        Expertise (Compétences)
-      </a>
-      <a href="#experiences"
-        class="mobile-link block text-xs font-semibold uppercase tracking-widest text-[#ebdcd0] hover:text-[#c48956] py-2 border-b border-[#c48956]/10">
-        Career (Expériences)
-      </a>
-      <a href="#avis"
-        class="mobile-link block text-xs font-semibold uppercase tracking-widest text-[#ebdcd0] hover:text-[#c48956] py-2 border-b border-[#c48956]/10">
-        Reviews (Témoignages)
-      </a>
-      <a href="#contact"
-        class="mobile-link block text-xs font-semibold uppercase tracking-widest text-[#ebdcd0] hover:text-[#c48956] py-2">
-        Contact Me
-      </a>
-      <div class="pt-3">
-        <a href="assets/CV_Hubert_SOSSOU_TONOUKOUIN.pdf" download="CV_Hubert_SOSSOU_TONOUKOUIN.pdf"
-          class="mobile-link w-full py-3 rounded-md btn-camel-solid text-white font-bold text-center block text-xs uppercase tracking-wider">
-          Télécharger mon CV (PDF)
+        <!-- CTA Rapide -->
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="btn_contact_header">
+          <span>Me contacter</span>
         </a>
+
+        <!-- Bouton Burger Mobile -->
+        <button id="mobileToggleBtn" class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+          <i data-lucide="menu"></i>
+        </button>
+
       </div>
+
     </div>
   </header>
 
-
-  <!-- =========================================================================
-       [SECTION 1 : HERO SECTION - EXACT COMPOSITION & TYPOGRAPHY OF SCREENSHOT]
-       ========================================================================= -->
-  <section id="accueil"
-    class="relative min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden flex flex-col justify-between">
-
-    <!-- Hero Main Container -->
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10 flex-grow flex items-center">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
-
-        <!-- Hero Left Column: Editorial Tag, Headline, Subtitle, CTAs -->
-        <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-left z-20">
-
-          <!-- Category Tag matching screenshot | JULIE SMITH | -->
-          <div class="editorial-tag flex items-center gap-2">
-            <span>| HUBERT SOSSOU TONOUKOUIN |</span>
-          </div>
-
-          <!-- Editorial Serif Headline matching screenshot "TV, Film, and Theater Actress" -->
-          <h1
-            class="text-4xl sm:text-6xl lg:text-[4.25rem] font-serif font-normal text-[#f5ede4] leading-[1.08] tracking-tight">
-            Community Manager,<br>
-            <span class="italic font-editorial text-[#ebdcd0]">Marketing & Vidéo</span>
-          </h1>
-
-          <!-- Subtitle matching screenshot "Available for commissions worldwide." -->
-          <p class="text-base sm:text-lg text-[#bdafa3] max-w-xl font-normal leading-relaxed">
-            Disponible pour missions & stratégie de marque dans le monde entier.
-          </p>
-
-          <!-- Buttons Row matching screenshot: Solid camel button with play + Dark outline button -->
-          <div class="pt-2 flex flex-wrap items-center gap-4">
-            <!-- Button 1: Solid Camel with Play Icon -->
-            <a href="#realisations"
-              class="px-7 py-3.5 rounded-sm btn-camel-solid text-white text-xs sm:text-sm font-semibold tracking-wider uppercase flex items-center gap-2.5 shadow-lg group">
-              <span class="text-[10px]">▶</span>
-              <span>Video Gallery</span>
-            </a>
-
-            <!-- Button 2: Dark Outlined Button -->
-            <a href="#contact"
-              class="px-7 py-3.5 rounded-sm btn-camel-outline text-xs sm:text-sm font-semibold tracking-wider uppercase flex items-center gap-2 transition-all">
-              <span>Contact Me</span>
-            </a>
-
-            <!-- CV Download Link -->
-            <a href="assets/CV_Hubert_SOSSOU_TONOUKOUIN.pdf" download="CV_Hubert_SOSSOU_TONOUKOUIN.pdf"
-              class="px-5 py-3.5 rounded-sm bg-transparent hover:bg-white/[0.04] text-[#bdafa3] hover:text-[#f5ede4] text-xs font-semibold tracking-wider uppercase border border-[#c48956]/25 hover:border-[#c48956]/60 transition-all flex items-center gap-2">
-              <i data-lucide="download" class="w-3.5 h-3.5 text-[#c48956]"></i>
-              <span>Télécharger CV</span>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Hero Center/Right Visual & Statistics Column -->
-        <div class="lg:col-span-5 relative flex items-center justify-center lg:justify-end">
-
-          <!-- Portrait Container -->
-          <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-none flex justify-center">
-
-            <!-- Warm radial backdrop aura matching Hubert's lighting -->
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-[#120b08] via-transparent to-transparent z-10 pointer-events-none">
-            </div>
-            <div
-              class="absolute -inset-4 bg-radial from-[#c48956]/20 via-[#8a5730]/10 to-transparent blur-2xl rounded-full -z-10">
-            </div>
-
-            <div
-              class="relative overflow-hidden rounded-2xl border border-[#c48956]/20 shadow-2xl max-h-[540px] aspect-[3/4] bg-[#1a100b]">
-              <img src="assets/hero_portrait.jpg"
-                alt="Hubert Sossou Tonoukouin - Community Manager & Spécialiste Marketing Digital"
-                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
-
-              <!-- Subtle bottom gradient -->
-              <div
-                class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#120b08] via-[#120b08]/50 to-transparent">
-              </div>
-            </div>
-
-            <!-- Right Floating Statistics (Matching screenshot's top-right circle icon & numbers) -->
-            <div
-              class="absolute top-4 -right-4 sm:-right-8 flex flex-col items-end text-right space-y-6 z-20 pointer-events-none sm:pointer-events-auto">
-
-              <!-- Circular Camera / Film Reel Badge from Screenshot -->
-              <div
-                class="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#c48956]/50 bg-[#1c110b]/90 backdrop-blur-md flex items-center justify-center text-[#c48956] shadow-xl">
-                <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.8">
-                  <circle cx="12" cy="12" r="9" />
-                  <circle cx="12" cy="12" r="3.5" />
-                  <circle cx="12" cy="5.8" r="1.3" fill="currentColor" />
-                  <circle cx="17.4" cy="8.9" r="1.3" fill="currentColor" />
-                  <circle cx="17.4" cy="15.1" r="1.3" fill="currentColor" />
-                  <circle cx="12" cy="18.2" r="1.3" fill="currentColor" />
-                  <circle cx="6.6" cy="15.1" r="1.3" fill="currentColor" />
-                  <circle cx="6.6" cy="8.9" r="1.3" fill="currentColor" />
-                </svg>
-              </div>
-
-              <!-- Stat 1: 10 + / 8 + years of acting / experience -->
-              <div class="bg-[#170f0b]/85 backdrop-blur-md p-3 sm:p-4 rounded-xl border border-[#c48956]/20 shadow-xl">
-                <p class="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#f5ede4] font-normal leading-none kpi-counter"
-                  data-target="8" data-prefix="" data-suffix=" +" data-final-text="8 +">
-                  8 +
-                </p>
-                <p class="text-[10px] sm:text-xs text-[#bdafa3] uppercase tracking-widest mt-1">
-                  years of experience
-                </p>
-              </div>
-
-              <!-- Stat 2: 12 nominations / +1385% growth -->
-              <div class="bg-[#170f0b]/85 backdrop-blur-md p-3 sm:p-4 rounded-xl border border-[#c48956]/20 shadow-xl">
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#c48956] font-normal leading-none kpi-counter"
-                  data-target="1385" data-prefix="+" data-suffix="%" data-formatted="comma" data-final-text="+1 385%">
-                  +1 385%
-                </p>
-                <p class="text-[10px] sm:text-xs text-[#bdafa3] uppercase tracking-widest mt-1">
-                  audience growth
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
+  <!-- Tiroir de Navigation Mobile -->
+  <nav id="mobileNav" class="mobile-nav" role="navigation" aria-label="Menu mobile">
+    <a href="#accueil" class="mobile-nav-link active" data-i18n="nav_profil">Profil</a>
+    <a href="#parcours" class="mobile-nav-link" data-i18n="nav_parcours">Parcours</a>
+    <a href="#projets" class="mobile-nav-link" data-i18n="nav_projets">Projets</a>
+    <a href="#competences" class="mobile-nav-link" data-i18n="nav_competences">Compétences</a>
+    <a href="#realisations" class="mobile-nav-link" data-i18n="nav_realisations">Réalisations</a>
+    <a href="#contact" class="mobile-nav-link" data-i18n="nav_contacts">Contacts</a>
+    
+    <div style="display: flex; gap: 0.75rem; margin-top: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+      <button id="mobileThemeToggleBtn" class="header-control-btn" style="flex: 1;">
+        <i data-lucide="moon" style="width: 16px; height: 16px;"></i>
+        <span>Mode Sombre</span>
+      </button>
+      <button id="mobileLangToggleBtn" class="header-control-btn" style="flex: 1;">
+        <i data-lucide="globe" style="width: 16px; height: 16px;"></i>
+        <span>English</span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Hero Bottom Bar: Matching Screenshot's 3-column contact & social layout -->
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full pt-12 z-20">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-[#c48956]/20 items-center">
+  <main id="mainContent">
 
-        <!-- Block 1: Contact Information with Slate Clapper Icon -->
-        <div class="flex items-center gap-3.5">
-          <div
-            class="w-11 h-11 rounded-full border border-[#c48956]/35 bg-[#1e130e] flex items-center justify-center text-[#c48956] flex-shrink-0">
-            <i data-lucide="clapperboard" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <p class="text-[10px] font-bold text-[#8a7b70] uppercase tracking-[0.2em]">Contact Information</p>
-            <a href="tel:+2290197150777"
-              class="block text-xs sm:text-sm font-medium text-[#f5ede4] hover:text-[#c48956] transition-colors">
-              +229 01 97 15 07 77
-            </a>
-            <a href="mailto:huberttonoukouin@gmail.com"
-              class="block text-xs sm:text-sm text-[#bdafa3] hover:text-[#c48956] transition-colors truncate">
-              huberttonoukouin@gmail.com
-            </a>
-          </div>
-        </div>
+    <!-- =========================================================================
+         SECTION 01 — HERO (2 COLONNES AVEC PHOTO EN MOUVEMENT CIRCULAIRE LENT)
+         ========================================================================= -->
+    <section id="accueil" class="section hero-section">
+      <div class="container">
+        
+        <div class="hero-grid">
+          
+          <!-- Colonne Gauche : Textes & CTA -->
+          <div class="hero-content">
+            
+            <!-- Badge Eyebrow -->
+            <div class="hero-status-pill animate-fade-slide" style="animation-delay: 0.1s;">
+              <span data-i18n="hero_eyebrow">Statisticien-Économètre • Data Analyste • Marketing Digital</span>
+            </div>
 
-        <!-- Block 2: Agent Contacts with Camera Tripod Icon -->
-        <div class="flex items-center gap-3.5">
-          <div
-            class="w-11 h-11 rounded-full border border-[#c48956]/35 bg-[#1e130e] flex items-center justify-center text-[#c48956] flex-shrink-0">
-            <i data-lucide="video" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <p class="text-[10px] font-bold text-[#8a7b70] uppercase tracking-[0.2em]">Agent Contacts & Location</p>
-            <a href="https://wa.me/2290192163618" target="_blank" rel="noopener noreferrer"
-              class="block text-xs sm:text-sm font-medium text-[#f5ede4] hover:text-[#c48956] transition-colors">
-              +229 01 92 16 36 18 (Ligne 2)
-            </a>
-            <p class="text-xs sm:text-sm text-[#bdafa3]">
-              Cotonou, Bénin & Remote Worldwide
+            <!-- Titre Principal -->
+            <h1 class="hero-title animate-fade-slide" style="animation-delay: 0.2s;" data-i18n="hero_title">
+              8 ans de<br>
+              communication digitale,<br>
+              pilotés par la donnée.
+            </h1>
+
+            <!-- Sous-titre / Lead -->
+            <p class="hero-desc animate-fade-slide" style="animation-delay: 0.3s;" data-i18n="hero_desc">
+              Du suivi statistique à la stratégie de contenu : réseaux sociaux, campagnes, vidéo et reporting. Je transforme la donnée en audiences, et les audiences en conversions.
             </p>
+
+            <!-- Actions -->
+            <div class="hero-actions animate-fade-slide" style="animation-delay: 0.4s;">
+              <a href="#contact" class="btn btn-primary" data-i18n="btn_contact">
+                <span>Me contacter</span>
+                <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+              </a>
+              <a href="#realisations" class="btn btn-secondary" data-i18n="btn_see_work">
+                <span>Voir les réalisations</span>
+              </a>
+            </div>
+
           </div>
+
+          <!-- Colonne Droite : Photo Hubert SOSSOU TONOUKOUIN en Mouvement Circulaire Très Lent -->
+          <div class="hero-visual-wrapper animate-fade-slide" style="animation-delay: 0.35s;">
+            <div class="hero-avatar-circular-container">
+              <div class="hero-circular-glow"></div>
+              <img src="assets/hero_profile_showcase.png" 
+                   alt="Hubert SOSSOU TONOUKOUIN — 08+ ans d'expériences, 50+ clients, 200+ vidéos créées" 
+                   class="hero-circular-img" 
+                   loading="eager" 
+                   fetchpriority="high">
+            </div>
+          </div>
+
         </div>
 
-        <!-- Block 3: Minimalist Social Icons matching screenshot -->
-        <div class="flex items-center justify-start md:justify-end gap-5 text-[#f5ede4]">
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/huberttsossou" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn" class="hover:text-[#c48956] transition-colors">
-            <i data-lucide="linkedin" class="w-5 h-5"></i>
-          </a>
-          <!-- WhatsApp -->
-          <a href="https://wa.me/2290197150777" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-            class="hover:text-[#c48956] transition-colors">
-            <i data-lucide="message-circle" class="w-5 h-5"></i>
-          </a>
-          <!-- YouTube -->
-          <a href="#realisations" aria-label="YouTube" class="hover:text-[#c48956] transition-colors">
-            <i data-lucide="youtube" class="w-5 h-5"></i>
-          </a>
-          <!-- Facebook -->
-          <a href="#contact" aria-label="Facebook" class="hover:text-[#c48956] transition-colors">
-            <i data-lucide="facebook" class="w-5 h-5"></i>
-          </a>
-          <!-- Twitter / X -->
-          <a href="#contact" aria-label="Twitter" class="hover:text-[#c48956] transition-colors">
-            <i data-lucide="twitter" class="w-5 h-5"></i>
-          </a>
+        <!-- 4 Statistiques Clés Exactes -->
+        <div class="hero-metrics-bar animate-fade-slide" style="animation-delay: 0.5s;">
+          
+          <div class="metric-item">
+            <div class="metric-number-wrapper">
+              <span class="metric-number highlight-pill" data-i18n="stat_1_val">8 ans</span>
+            </div>
+            <span class="metric-label" data-i18n="stat_1_lbl">EXPÉRIENCE EN COMMUNICATION DIGITALE</span>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number-wrapper">
+              <span class="metric-number" data-i18n="stat_2_val">+1385%</span>
+            </div>
+            <span class="metric-label" data-i18n="stat_2_lbl">CROISSANCE LINKEDIN (IWO GROUP)</span>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number-wrapper">
+              <span class="metric-number" data-i18n="stat_3_val">+45%</span>
+            </div>
+            <span class="metric-label" data-i18n="stat_3_lbl">HAUSSE D'ENGAGEMENT (AFRICA IMMO)</span>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number-wrapper">
+              <span class="metric-number" data-i18n="stat_4_val">6 campus</span>
+            </div>
+            <span class="metric-label" data-i18n="stat_4_lbl">COMMUNICATION MULTI-SITES BÉNIN & TOGO</span>
+          </div>
+
         </div>
 
       </div>
-    </div>
+    </section>
 
-  </section>
-
-
-  <!-- =========================================================================
-       [SECTION 2 : | ABOUT ME | - EXACT COMPOSITION & TYPOGRAPHY OF SCREENSHOT]
-       ========================================================================= -->
-  <section id="apropos" class="py-24 bg-[#170f0b] border-t border-[#c48956]/15 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <!-- Category Tag matching screenshot | ABOUT ME | -->
-      <div class="editorial-tag mb-12">
-        <span>| ABOUT ME |</span>
-      </div>
-
-      <!-- Two-column Grid matching screenshot: Left photo, Right editorial copy & awards -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
-
-        <!-- Left Column: Portrait photo matching screenshot's vertical framing -->
-        <div class="lg:col-span-5">
-          <div
-            class="relative rounded-2xl overflow-hidden border border-[#c48956]/25 shadow-2xl bg-[#120b08] aspect-[3/4] group">
-            <img src="assets/about_portrait.jpg" alt="Hubert Sossou Tonoukouin - Portrait Studio"
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
-
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-[#120b08]/80 via-transparent to-transparent pointer-events-none">
-            </div>
-
-            <div class="absolute bottom-5 left-5 right-5 z-10 flex items-center justify-between">
-              <div>
-                <p class="text-sm font-serif font-bold text-[#f5ede4]">Hubert Sossou Tonoukouin</p>
-                <p class="text-xs text-[#c48956]">Stratège Digital & Community Manager</p>
-              </div>
-              <span
-                class="px-3 py-1 rounded-full bg-[#120b08]/80 border border-[#c48956]/30 text-[10px] text-[#ebdcd0] uppercase tracking-wider font-semibold">
-                8+ Ans
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Editorial Lead, Narrative & Prestigious Awards List -->
-        <div class="lg:col-span-7 space-y-7">
-
-          <!-- Editorial Lead Headline matching screenshot typography -->
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#f5ede4] leading-snug font-normal">
-            Mon parcours professionnel fusionne l'art du storytelling visuel, la rigueur de la donnée et la stratégie
-            d'engagement. J'ai eu l'honneur de piloter la communication de marques d'envergure, de l'hyper-croissance
-            B2B d'un éditeur SaaS aux productions vidéo multi-campus à fort volume.
+    <!-- =========================================================================
+         SECTION 02 — PHILOSOPHIE (APERÇU GLOBAL)
+         ========================================================================= -->
+    <section id="philosophie" class="section philosophy-section">
+      <div class="container">
+        
+        <div class="reveal-on-scroll">
+          <span class="section-tag" data-i18n="phil_tag">APERÇU GLOBAL</span>
+          <h2 class="section-title" data-i18n="phil_title">
+            Un communicant qui<br>
+            pilote par les chiffres.
           </h2>
-
-          <!-- Descriptive Narrative Paragraphs -->
-          <div class="space-y-4 text-sm sm:text-base text-[#bdafa3] font-normal leading-relaxed">
-            <p>
-              Passionné par la communication, le web et l’analyse de données, mon profil associe la rigueur d'un <strong
-                class="text-[#f5ede4] font-semibold">Analyste Statisticien & Économètre (FASEG - UAC)</strong> à la
-              créativité d'un <strong class="text-[#f5ede4] font-semibold">Spécialiste en Marketing Digital (EPITECH
-                Bénin)</strong>. Capable d'orchestrer simultanément la stratégie B2B d'un éditeur de logiciels et la
-              communication multi-sites d'instituts de formation, je maîtrise la création de contenus vidéo en temps
-              réel, le SEO local et la fidélisation d'audience.
-            </p>
-            <p>
-              Qu'il s'agisse de captiver une audience sur TikTok et Reels avec un rythme soutenu de 5 publications
-              quotidiennes, ou de construire une autorité de marque pérenne sur LinkedIn, chaque action est pensée pour
-              générer un retour sur investissement tangible et mesurable.
-            </p>
-          </div>
-
-          <!-- Thin Separator matching screenshot -->
-          <div class="pt-2 border-t border-[#c48956]/20"></div>
-
-          <!-- Awards / Honors List with Custom Bronze Icons matching screenshot -->
-          <div class="space-y-3.5 pt-1">
-
-            <!-- Award 1 -->
-            <div class="flex items-start gap-3 text-xs sm:text-sm text-[#ebdcd0]">
-              <div class="text-[#c48956] mt-0.5 flex-shrink-0">
-                <i data-lucide="award" class="w-4 h-4"></i>
-              </div>
-              <p class="leading-normal">
-                <strong class="text-[#f5ede4]">Best LinkedIn B2B Growth :</strong> Propulsion d'audience de +1 385% (200
-                ➔ ~3 000 abonnés ciblés), IWO GROUP (2023-2025);
-              </p>
-            </div>
-
-            <!-- Award 2 -->
-            <div class="flex items-start gap-3 text-xs sm:text-sm text-[#ebdcd0]">
-              <div class="text-[#c48956] mt-0.5 flex-shrink-0">
-                <i data-lucide="film" class="w-4 h-4"></i>
-              </div>
-              <p class="leading-normal">
-                <strong class="text-[#f5ede4]">Direction & Production Vidéo :</strong> Réalisation de plus de 100 vidéos
-                courtes au rythme de 5 posts/jour, IMA (2025-2026);
-              </p>
-            </div>
-
-            <!-- Award 3 -->
-            <div class="flex items-start gap-3 text-xs sm:text-sm text-[#ebdcd0]">
-              <div class="text-[#c48956] mt-0.5 flex-shrink-0">
-                <i data-lucide="trending-up" class="w-4 h-4"></i>
-              </div>
-              <p class="leading-normal">
-                <strong class="text-[#f5ede4]">Performance Commerciale Record :</strong> 260% des objectifs mensuels
-                d'acquisition atteints, FEPARC SARL;
-              </p>
-            </div>
-
-            <!-- Award 4 -->
-            <div class="flex items-start gap-3 text-xs sm:text-sm text-[#ebdcd0]">
-              <div class="text-[#c48956] mt-0.5 flex-shrink-0">
-                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
-              </div>
-              <p class="leading-normal">
-                <strong class="text-[#f5ede4]">Double Cursus d'Excellence :</strong> Licence Statistiques & Économétrie
-                (UAC) & Certifié Web & Data Analysis (EPITECH Bénin).
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================================
-       [SECTION 3 : | FILMOGRAPHY & PORTFOLIO | - PROJETS PHARES & SHOWROOM]
-       ========================================================================= -->
-  <section id="realisations" class="py-24 bg-[#120b08] border-t border-[#c48956]/15 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <!-- Category Tag & Heading -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div>
-          <div class="editorial-tag mb-3">
-            <span>| FILMOGRAPHY & PROJECTS |</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-serif text-[#f5ede4] font-normal tracking-tight">
-            Galerie de Réalisations & Études de Cas
-          </h2>
-          <p class="text-sm text-[#bdafa3] mt-2 max-w-xl">
-            Découvrez un aperçu concret des stratégies menées, de la production de formats vidéo courts au pilotage de
-            croissance B2B.
+          <p class="philosophy-lead" data-i18n="phil_lead">
+            Licencié en Statistiques & Économétrie (UAC, 2016) et certifié Développement & Data Analysis (EPITECH Bénin, 2023), j'allie analyse de données et communication digitale. J'ai conduit la communication d'organisations de l'éducation, de l'immobilier, des ONG et des services, avec une approche mesurée par les KPI.
           </p>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap gap-2">
-          <button class="portfolio-tab active px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider"
-            data-filter="all">
-            Tous les Projets
-          </button>
-          <button class="portfolio-tab px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider"
-            data-filter="video">
-            Production Vidéo
-          </button>
-          <button class="portfolio-tab px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider"
-            data-filter="growth">
-            Growth B2B
-          </button>
-          <button class="portfolio-tab px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider"
-            data-filter="community">
-            ONG & Social Media
-          </button>
-          <button class="portfolio-tab px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider"
-            data-filter="seo">
-            SEO & Local
-          </button>
-        </div>
-      </div>
-
-      <!-- Project Cards Grid (4 Rich Cinema-Style Cards) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <!-- Projet 1 : IMA Vidéo (Category: video) -->
-        <div class="project-item luxury-card rounded-2xl overflow-hidden cursor-pointer group" data-category="video"
-          onclick="openProjectModal('ima')">
-          <div class="relative aspect-video overflow-hidden bg-[#1a100b]">
-            <img src="assets/project_design_video.jpg" alt="Institut du Multimédia Appliqué"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#170f0b] via-[#170f0b]/40 to-transparent"></div>
-
-            <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 rounded-sm bg-[#b57948] text-white text-[10px] font-bold uppercase tracking-wider">
-                Vidéo & Réseaux Sociaux
-              </span>
+        <!-- 4 Cartes d'Intervention -->
+        <div class="philosophy-cards-grid">
+          
+          <div class="feature-card reveal-on-scroll reveal-stagger-1">
+            <div class="feature-icon-box">
+              <i data-lucide="compass" style="width: 22px; height: 22px;"></i>
             </div>
+            <h3 class="feature-title" data-i18n="card_1_title">Stratégie & exécution</h3>
+            <p class="feature-desc" data-i18n="card_1_desc">
+              Stratégie de communication digitale, gestion des réseaux sociaux et des fiches Google Business, rapports mensuels de performance.
+            </p>
+          </div>
 
-            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-              <div>
-                <p class="text-xs text-[#c48956] font-semibold uppercase tracking-wider">Institut du Multimédia Appliqué
-                </p>
-                <h3 class="text-xl font-serif text-[#f5ede4] font-medium">Campagnes Vidéo & Reels Multi-Campus</h3>
+          <div class="feature-card reveal-on-scroll reveal-stagger-2">
+            <div class="feature-icon-box">
+              <i data-lucide="target" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="feature-title" data-i18n="card_2_title">Performance & conversions</h3>
+            <p class="feature-desc" data-i18n="card_2_desc">
+              Campagnes Facebook, LinkedIn, Google et TikTok Ads, growth marketing B2B, CRM (Brevo, Systeme.io) et tunnel de conversion.
+            </p>
+          </div>
+
+          <div class="feature-card reveal-on-scroll reveal-stagger-3">
+            <div class="feature-icon-box">
+              <i data-lucide="pen-tool" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="feature-title" data-i18n="card_3_title">Création & production</h3>
+            <p class="feature-desc" data-i18n="card_3_desc">
+              Visuels, carrousels, vidéos, scripts et supports (roll-up, bannières) avec Photoshop, Illustrator, Canva, CapCut.
+            </p>
+          </div>
+
+          <div class="feature-card reveal-on-scroll reveal-stagger-4">
+            <div class="feature-icon-box">
+              <i data-lucide="bar-chart-2" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="feature-title" data-i18n="card_4_title">Data & SEO</h3>
+            <p class="feature-desc" data-i18n="card_4_desc">
+              Dashboards Power BI, Python, SQL, KoboToolbox, études quantitatives et rédaction web SEO.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 03 — PARCOURS (TIMELINE)
+         ========================================================================= -->
+    <section id="parcours" class="section timeline-section">
+      <div class="container">
+        
+        <div class="reveal-on-scroll" style="text-align: center; max-width: 700px; margin: 0 auto;">
+          <span class="section-tag" data-i18n="timeline_tag">PARCOURS</span>
+          <h2 class="section-title" data-i18n="timeline_title">Une trajectoire communication + data.</h2>
+          <p class="section-subtitle" style="margin: 0 auto;" data-i18n="timeline_sub">
+            Des missions variées, toujours reliées à la mesure de la performance.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          
+          <!-- Étape 1 (Gauche) : IMA -->
+          <div class="timeline-item left reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date-badge" data-i18n="time_1_date">Juin 2024 – Oct. 2025</span>
+              <h3 class="timeline-role" data-i18n="time_1_role">Chargé de Communication & Marketing Digital</h3>
+              <div class="timeline-company" data-i18n="time_1_comp">Institut du Multimédia Appliqué (IMA)</div>
+              <p class="timeline-desc" data-i18n="time_1_desc">
+                Stratégie digitale pour les six campus (Bénin et Togo), contenus, campagnes de recrutement d'étudiants, événements de promotion, suivi KPI et rapports mensuels.
+              </p>
+            </div>
+          </div>
+
+          <!-- Étape 2 (Droite) : IWO GROUP SARL -->
+          <div class="timeline-item right reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date-badge" data-i18n="time_2_date">Juil. 2023 – 2026</span>
+              <h3 class="timeline-role" data-i18n="time_2_role">Community Manager, Marketing Digital & Analyste Marketing</h3>
+              <div class="timeline-company" data-i18n="time_2_comp">IWO GROUP SARL</div>
+              <p class="timeline-desc" data-i18n="time_2_desc">
+                Présence multi-plateformes (Facebook, LinkedIn, X, TikTok, YouTube), campagnes B2B et growth, dashboards et KPI. +1 385 % de croissance LinkedIn, 3 nouveaux canaux lancés.
+              </p>
+            </div>
+          </div>
+
+          <!-- Étape 3 (Gauche) : SemJuice France -->
+          <div class="timeline-item left reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date-badge" data-i18n="time_3_date">Juin 2022 – Fév. 2023</span>
+              <h3 class="timeline-role" data-i18n="time_3_role">Rédacteur Web SEO</h3>
+              <div class="timeline-company" data-i18n="time_3_comp">SemJuice France / Ogmius Oueb</div>
+              <p class="timeline-desc" data-i18n="time_3_desc">
+                Articles SEO optimisés pour la hausse du trafic organique des clients.
+              </p>
+            </div>
+          </div>
+
+          <!-- Étape 4 (Droite) : ONG JVE Bénin -->
+          <div class="timeline-item right reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date-badge" data-i18n="time_4_date">2018 – 2021</span>
+              <h3 class="timeline-role" data-i18n="time_4_role">Community Manager & Responsable Membership</h3>
+              <div class="timeline-company" data-i18n="time_4_comp">ONG JVE Bénin</div>
+              <p class="timeline-desc" data-i18n="time_4_desc">
+                Visibilité digitale (+30 % d'engagement), contenus multimédias, blog et relations médias, animation de la base de membres.
+              </p>
+            </div>
+          </div>
+
+          <!-- Étape 5 (Gauche) : Africa Immo Bénin -->
+          <div class="timeline-item left reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date-badge" data-i18n="time_5_date">Juin 2017 – Août 2018</span>
+              <h3 class="timeline-role" data-i18n="time_5_role">Chargé de Communication & Marketing Digital</h3>
+              <div class="timeline-company" data-i18n="time_5_comp">Africa Immo Bénin</div>
+              <p class="timeline-desc" data-i18n="time_5_desc">
+                Stratégie de contenu et publicités sociales : +45 % d'engagement, prospection et fidélisation via les réseaux.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 04 — PROJETS (5 ORGANISATIONS, DES RÉSULTATS MESURÉS)
+         La flèche à l'extrémité droite permet d'afficher les détails complets !
+         ========================================================================= -->
+    <section id="projets" class="section entities-section">
+      <div class="container">
+        
+        <div class="reveal-on-scroll">
+          <span class="section-tag" data-i18n="proj_tag">PROJETS</span>
+          <h2 class="section-title" data-i18n="proj_title">5 organisations, des résultats mesurés.</h2>
+          <p class="section-subtitle" data-i18n="proj_sub">
+            Canaux gérés, résultats clés et missions marquantes.
+          </p>
+        </div>
+
+        <div class="accordion-container" id="projectsAccordion">
+          
+          <!-- ORGANISATION 1 : IMA (OUVERTE PAR DÉFAUT) -->
+          <div class="accordion-item active reveal-on-scroll" data-org-id="ima">
+            <div class="accordion-header">
+              <div class="accordion-header-left">
+                <h3 class="accordion-title">Institut du Multimédia Appliqué (IMA)</h3>
+                <span class="accordion-sector" data-i18n="org1_cat">Éducation • Bénin & Togo</span>
               </div>
-              <span
-                class="w-10 h-10 rounded-full bg-[#120b08]/80 border border-[#c48956]/40 flex items-center justify-center text-[#c48956] group-hover:bg-[#b57948] group-hover:text-white transition-all">
-                <i data-lucide="play" class="w-4 h-4"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-[#bdafa3] leading-relaxed line-clamp-2">
-              Production dynamique de plus de 100 vidéos au rythme soutenu de 5 publications/jour pour valoriser la vie
-              étudiante et recruter sur les 6 campus de l'IMA.
-            </p>
-            <div class="pt-3 border-t border-[#c48956]/15 flex items-center justify-between text-xs text-[#8a7b70]">
-              <span>Périmètre : <strong class="text-[#ebdcd0]">6 Campus</strong></span>
-              <span class="text-[#c48956] font-semibold group-hover:underline flex items-center gap-1">
-                Explorer l'étude de cas <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 2 : IWO GROUP (Category: growth) -->
-        <div class="project-item luxury-card rounded-2xl overflow-hidden cursor-pointer group" data-category="growth"
-          onclick="openProjectModal('iwo')">
-          <div class="relative aspect-video overflow-hidden bg-[#1a100b]">
-            <img src="assets/project_marketing.jpg" alt="IWO GROUP SARL"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#170f0b] via-[#170f0b]/40 to-transparent"></div>
-
-            <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 rounded-sm bg-[#b57948] text-white text-[10px] font-bold uppercase tracking-wider">
-                B2B & Lead Generation
-              </span>
-            </div>
-
-            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-              <div>
-                <p class="text-xs text-[#c48956] font-semibold uppercase tracking-wider">IWO GROUP SARL (Éditeur SaaS)
-                </p>
-                <h3 class="text-xl font-serif text-[#f5ede4] font-medium">Stratégie Growth & Carrousels B2B</h3>
-              </div>
-              <span
-                class="w-10 h-10 rounded-full bg-[#120b08]/80 border border-[#c48956]/40 flex items-center justify-center text-[#c48956] group-hover:bg-[#b57948] group-hover:text-white transition-all">
-                <i data-lucide="trending-up" class="w-4 h-4"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-[#bdafa3] leading-relaxed line-clamp-2">
-              Explosion d'audience LinkedIn de 200 à près de 3 000 abonnés ciblés (+1 385%), création de carrousels
-              pédagogiques et génération continue de leads SaaS.
-            </p>
-            <div class="pt-3 border-t border-[#c48956]/15 flex items-center justify-between text-xs text-[#8a7b70]">
-              <span>Impact : <strong class="text-[#c48956]">+1 385% abonnés</strong></span>
-              <span class="text-[#c48956] font-semibold group-hover:underline flex items-center gap-1">
-                Explorer l'étude de cas <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 3 : ONG JVE Bénin (Category: community) -->
-        <div class="project-item luxury-card rounded-2xl overflow-hidden cursor-pointer group" data-category="community"
-          onclick="openProjectModal('jve')">
-          <div class="relative aspect-video overflow-hidden bg-[#1a100b]">
-            <img src="assets/expertise_bg.jpg" alt="ONG JVE Bénin"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#170f0b] via-[#170f0b]/40 to-transparent"></div>
-
-            <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 rounded-sm bg-[#b57948] text-white text-[10px] font-bold uppercase tracking-wider">
-                Communauté & Plaidoyer
-              </span>
-            </div>
-
-            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-              <div>
-                <p class="text-xs text-[#c48956] font-semibold uppercase tracking-wider">ONG JVE Bénin</p>
-                <h3 class="text-xl font-serif text-[#f5ede4] font-medium">Sensibilisation & Rapports d'Impact</h3>
-              </div>
-              <span
-                class="w-10 h-10 rounded-full bg-[#120b08]/80 border border-[#c48956]/40 flex items-center justify-center text-[#c48956] group-hover:bg-[#b57948] group-hover:text-white transition-all">
-                <i data-lucide="users" class="w-4 h-4"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-[#bdafa3] leading-relaxed line-clamp-2">
-              Passage rapide de 3 500 à 5 000 abonnés en 4 mois, animation des réseaux sociaux, coordination de 220
-              volontaires et conception de rapports d'impact visuels.
-            </p>
-            <div class="pt-3 border-t border-[#c48956]/15 flex items-center justify-between text-xs text-[#8a7b70]">
-              <span>Croissance : <strong class="text-[#ebdcd0]">+1 500 abonnés en 4 mois</strong></span>
-              <span class="text-[#c48956] font-semibold group-hover:underline flex items-center gap-1">
-                Explorer l'étude de cas <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 4 : SemJuice France (Category: seo) -->
-        <div class="project-item luxury-card rounded-2xl overflow-hidden cursor-pointer group" data-category="seo"
-          onclick="openProjectModal('seo')">
-          <div class="relative aspect-video overflow-hidden bg-[#1a100b]">
-            <img src="assets/project_powerbi.jpg" alt="SemJuice France / SEO Local"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#170f0b] via-[#170f0b]/40 to-transparent"></div>
-
-            <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 rounded-sm bg-[#b57948] text-white text-[10px] font-bold uppercase tracking-wider">
-                SEO Local & Conversion
-              </span>
-            </div>
-
-            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-              <div>
-                <p class="text-xs text-[#c48956] font-semibold uppercase tracking-wider">SemJuice France / Ogmius Oueb
-                </p>
-                <h3 class="text-xl font-serif text-[#f5ede4] font-medium">Rédaction SEO & Google Business</h3>
-              </div>
-              <span
-                class="w-10 h-10 rounded-full bg-[#120b08]/80 border border-[#c48956]/40 flex items-center justify-center text-[#c48956] group-hover:bg-[#b57948] group-hover:text-white transition-all">
-                <i data-lucide="search" class="w-4 h-4"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-[#bdafa3] leading-relaxed line-clamp-2">
-              Rédaction de contenus optimisés pour le référencement naturel et optimisation sémantique des fiches Google
-              Business Profile pour générer des leads qualifiés.
-            </p>
-            <div class="pt-3 border-t border-[#c48956]/15 flex items-center justify-between text-xs text-[#8a7b70]">
-              <span>Résultat : <strong class="text-[#ebdcd0]">260% objectifs atteints</strong></span>
-              <span class="text-[#c48956] font-semibold group-hover:underline flex items-center gap-1">
-                Explorer l'étude de cas <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================================
-       [SECTION 4 : | EXPERTISE & SKILLS | - SAVOIR-FAIRE & STACK TECHNIQUE]
-       ========================================================================= -->
-  <section id="competences" class="py-24 bg-[#170f0b] border-t border-[#c48956]/15 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <!-- Category Tag & Heading -->
-      <div class="editorial-tag mb-3">
-        <span>| EXPERTISE & ROLES |</span>
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-serif text-[#f5ede4] font-normal tracking-tight mb-4">
-        Savoir-Faire Stratégique & Outils
-      </h2>
-      <p class="text-sm text-[#bdafa3] max-w-2xl mb-14">
-        Une maîtrise opérationnelle transversale combinant créativité visuelle, analyse de conversion et animation de
-        communautés.
-      </p>
-
-      <!-- 4 Strategic Pillars Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-
-        <!-- Pillar 1 -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div
-              class="w-11 h-11 rounded-xl bg-[#2a1a12] border border-[#c48956]/30 text-[#c48956] flex items-center justify-center">
-              <i data-lucide="share-2" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-serif font-bold text-[#f5ede4]">Social Media Management</h3>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Gestion simultanée multi-canaux (LinkedIn, TikTok, Facebook, Instagram), élaboration de plannings
-              éditoriaux, modération et fidélisation.
-            </p>
-          </div>
-          <span class="text-[10px] text-[#c48956] font-semibold tracking-wider uppercase">Multi-Comptes & Volume</span>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div
-              class="w-11 h-11 rounded-xl bg-[#2a1a12] border border-[#c48956]/30 text-[#c48956] flex items-center justify-center">
-              <i data-lucide="video" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-serif font-bold text-[#f5ede4]">Production Vidéo & Reels</h3>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Tournage et montage ultra-rapide (CapCut, Premiere), sous-titrage dynamique, accroches percutantes et
-              couverture d'événements en direct.
-            </p>
-          </div>
-          <span class="text-[10px] text-[#c48956] font-semibold tracking-wider uppercase">Formats Courts & Lives</span>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div
-              class="w-11 h-11 rounded-xl bg-[#2a1a12] border border-[#c48956]/30 text-[#c48956] flex items-center justify-center">
-              <i data-lucide="trending-up" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-serif font-bold text-[#f5ede4]">Growth Marketing & B2B</h3>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Acquisition pour éditeurs SaaS, carrousels LinkedIn à forte valeur pédagogique, newsletters sectorielles
-              et tunnels de prospection.
-            </p>
-          </div>
-          <span class="text-[10px] text-[#c48956] font-semibold tracking-wider uppercase">Lead Generation & SaaS</span>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div
-              class="w-11 h-11 rounded-xl bg-[#2a1a12] border border-[#c48956]/30 text-[#c48956] flex items-center justify-center">
-              <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
-            </div>
-            <h3 class="text-lg font-serif font-bold text-[#f5ede4]">Data Analytics & SEO</h3>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Culture du chiffre héritée de la FASEG : suivi des KPIs, analyse des taux de conversion, SEO local (Google
-              Business Profile) et reporting.
-            </p>
-          </div>
-          <span class="text-[10px] text-[#c48956] font-semibold tracking-wider uppercase">Rigueur & Optimisation</span>
-        </div>
-
-      </div>
-
-      <!-- Tools & Platforms Grid -->
-      <div>
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#8a7b70] mb-6">
-          Écosystème d'Outils Maîtrisés :
-        </p>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5">
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="video" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">CapCut / Premiere</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="palette" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">Canva Pro</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="image" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">Photoshop / Illustrator</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="linkedin" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">LinkedIn Ads</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="facebook" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">Meta Business Suite</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="play" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">TikTok Studio</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="mail" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">Brevo / HubSpot</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="globe" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">WordPress / SEO</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="activity" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">Google Analytics GA4</span>
-          </div>
-
-          <div
-            class="p-3.5 rounded-xl bg-[#1d130e]/80 border border-[#c48956]/15 hover:border-[#c48956]/40 transition-colors flex items-center gap-3">
-            <i data-lucide="table" class="w-4 h-4 text-[#c48956]"></i>
-            <span class="text-xs font-semibold text-[#ebdcd0]">Excel / Power BI</span>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================================
-       [SECTION 5 : | CAREER & ROLES | - EXPÉRIENCES PROFESSIONNELLES]
-       ========================================================================= -->
-  <section id="experiences" class="py-24 bg-[#120b08] border-t border-[#c48956]/15 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <!-- Category Tag & Heading -->
-      <div class="editorial-tag mb-3">
-        <span>| CAREER & TIMELINE |</span>
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-serif text-[#f5ede4] font-normal tracking-tight mb-4">
-        Parcours Professionnel
-      </h2>
-      <p class="text-sm text-[#bdafa3] max-w-xl mb-16">
-        Frise chronologique de mes responsabilités en gestion de marques, community management et direction marketing.
-      </p>
-
-      <!-- Chronological Timeline -->
-      <div class="relative max-w-4xl mx-auto pl-8 sm:pl-10 space-y-10">
-
-        <!-- Glowing Vertical Stem -->
-        <div class="timeline-stem-chocolate"></div>
-
-        <!-- Experience 1: Depuis Oct 2025 - IMA -->
-        <div class="relative group">
-          <div
-            class="absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 rounded-full bg-[#b57948] border-4 border-[#120b08] shadow-md group-hover:scale-125 transition-transform">
-          </div>
-
-          <div class="luxury-card p-6 sm:p-7 rounded-2xl space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs font-bold text-[#c48956] uppercase tracking-wider">
-                Depuis Octobre 2025 (En cours)
-              </span>
-              <span
-                class="text-[10px] uppercase tracking-widest text-[#ebdcd0] bg-[#c48956]/20 px-2.5 py-0.5 rounded-full font-semibold">
-                Poste Actuel
-              </span>
-            </div>
-
-            <h3 class="text-xl font-serif font-bold text-[#f5ede4]">
-              Community Manager – <span class="text-[#c48956]">Institut du Multimédia Appliqué (IMA)</span>
-            </h3>
-
-            <p class="text-xs text-[#8a7b70] font-semibold">
-              Périmètre : 6 campus • 5 publications/jour • +100 vidéos produites et diffusées de A à Z.
-            </p>
-
-            <p class="text-sm text-[#bdafa3] leading-relaxed">
-              Supervision de la ligne éditoriale multi-campus. Tournage, montage et diffusion temps réel de formats
-              courts (TikTok, Reels, Shorts), mise en valeur des filières d'apprentissage, immersion événementielle et
-              animation de communauté étudiante.
-            </p>
-
-            <div class="flex flex-wrap gap-2 pt-1 text-xs text-[#ebdcd0]">
-              <span class="px-2.5 py-1 rounded bg-[#170f0b] border border-[#c48956]/20">Production Vidéo</span>
-              <span class="px-2.5 py-1 rounded bg-[#170f0b] border border-[#c48956]/20">CapCut</span>
-              <span class="px-2.5 py-1 rounded bg-[#170f0b] border border-[#c48956]/20">6 Campus</span>
-              <span class="px-2.5 py-1 rounded bg-[#170f0b] border border-[#c48956]/20">TikTok & Reels</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience 2: En parallèle - IWO GROUP Lead -->
-        <div class="relative group">
-          <div
-            class="absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 rounded-full bg-[#c48956] border-4 border-[#120b08] shadow-md group-hover:scale-125 transition-transform">
-          </div>
-
-          <div class="luxury-card p-6 sm:p-7 rounded-2xl space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs font-bold text-[#c48956] uppercase tracking-wider">
-                En parallèle (Actuel)
-              </span>
-              <span
-                class="text-[10px] uppercase tracking-widest text-[#ebdcd0] bg-[#c48956]/20 px-2.5 py-0.5 rounded-full font-semibold">
-                Stratégie B2B
-              </span>
-            </div>
-
-            <h3 class="text-xl font-serif font-bold text-[#f5ede4]">
-              Lead Communication & Marketing – <span class="text-[#c48956]">IWO GROUP SARL</span>
-            </h3>
-
-            <p class="text-xs text-[#8a7b70] font-semibold">
-              Périmètre : Stratégie B2B • Croissance LinkedIn • Automatisation Emailing (Brevo / HubSpot).
-            </p>
-
-            <p class="text-sm text-[#bdafa3] leading-relaxed">
-              Pilotage de l'image de marque et de l'acquisition pour l'éditeur de solutions logicielles SaaS. Création
-              de carrousels LinkedIn à forte autorité, newsletters sectorielles, gestion de campagnes de prospection
-              multicanale et suivi data-driven des conversions.
-            </p>
-
-            <div class="flex flex-wrap gap-2 pt-1 text-xs text-[#ebdcd0]">
-              <span class="px-2.5 py-1 rounded bg-[#170f0b] border border-[#c48956]/20">Growth B2B</span>
-              <span class="px-2.5 py-1 rounded bg-[#170f0b] border border-[#c48956]/20">LinkedIn Inbound</span>
-              <span class="px-2.5 py-1 rounded bg-[#170f0b] border border-[#c48956]/20">Brevo & HubSpot</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience 3: 2023 - 2025 - IWO GROUP -->
-        <div class="relative group">
-          <div
-            class="absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 rounded-full bg-[#a86c3d] border-4 border-[#120b08] shadow-md group-hover:scale-125 transition-transform">
-          </div>
-
-          <div class="luxury-card p-6 sm:p-7 rounded-2xl space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs text-[#8a7b70] font-bold uppercase tracking-wider">
-                Juillet 2023 – Octobre 2025
-              </span>
-              <span class="text-xs text-[#c48956] font-extrabold">+1 385% LinkedIn</span>
-            </div>
-
-            <h3 class="text-xl font-serif font-bold text-[#f5ede4]">
-              Chargé de Communication & Marketing Digital – <span class="text-[#c48956]">IWO GROUP SARL</span>
-            </h3>
-
-            <p class="text-sm text-[#bdafa3] leading-relaxed">
-              Mise en œuvre intégrale du plan média digital. Croissance spectaculaire de l'audience LinkedIn passant de
-              200 à environ 3 000 abonnés ciblés (+1 385%), création des supports commerciaux et modélisation des
-              conversions.
-            </p>
-          </div>
-        </div>
-
-        <!-- Experience 4: 2022 - SemJuice France -->
-        <div class="relative group">
-          <div
-            class="absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 rounded-full bg-[#8a5730] border-4 border-[#120b08] shadow-md group-hover:scale-125 transition-transform">
-          </div>
-
-          <div class="luxury-card p-6 sm:p-7 rounded-2xl space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs text-[#8a7b70] font-bold uppercase tracking-wider">
-                Juillet 2022 – Décembre 2022
-              </span>
-              <span class="text-xs text-[#ebdcd0]">France & International</span>
-            </div>
-
-            <h3 class="text-xl font-serif font-bold text-[#f5ede4]">
-              Rédacteur Web SEO – <span class="text-[#c48956]">SemJuice France / Ogmius Oueb</span>
-            </h3>
-
-            <p class="text-sm text-[#bdafa3] leading-relaxed">
-              Rédaction de contenus optimisés pour le référencement naturel pour des marques exigeantes. Intégration
-              sémantique poussée, structuration HTML (balises Hn, cocons sémantiques) et optimisation des fiches
-              d'entreprises locales.
-            </p>
-          </div>
-        </div>
-
-        <!-- Experience 5: 2018 - 2021 - ONG JVE Bénin -->
-        <div class="relative group">
-          <div
-            class="absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 rounded-full bg-[#a86c3d] border-4 border-[#120b08] shadow-md group-hover:scale-125 transition-transform">
-          </div>
-
-          <div class="luxury-card p-6 sm:p-7 rounded-2xl space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs text-[#8a7b70] font-bold uppercase tracking-wider">
-                Juin 2018 – Novembre 2021 (3 ans et demi)
-              </span>
-              <span class="text-xs text-[#c48956] font-semibold">+1 500 Abonnés</span>
-            </div>
-
-            <h3 class="text-xl font-serif font-bold text-[#f5ede4]">
-              Community Manager & Responsable Membership – <span class="text-[#c48956]">ONG JVE Bénin</span>
-            </h3>
-
-            <p class="text-sm text-[#bdafa3] leading-relaxed">
-              Animation et développement de la communauté numérique de l'ONG (Facebook, Twitter, LinkedIn). Mobilisation
-              citoyenne, gain de 1 500 abonnés en 4 mois, gestion des adhésions de volontaires et conception de rapports
-              d'activité visuels.
-            </p>
-          </div>
-        </div>
-
-        <!-- Experience 6: 2017 - 2018 - Africa Immo Benin -->
-        <div class="relative group">
-          <div
-            class="absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 rounded-full bg-[#6e4324] border-4 border-[#120b08] shadow-md group-hover:scale-125 transition-transform">
-          </div>
-
-          <div class="luxury-card p-6 sm:p-7 rounded-2xl space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs text-[#8a7b70] font-bold uppercase tracking-wider">
-                Juin 2017 – Mai 2018
-              </span>
-              <span class="text-xs text-[#c48956] font-semibold">+45% Engagement</span>
-            </div>
-
-            <h3 class="text-xl font-serif font-bold text-[#f5ede4]">
-              Chargé de Communication & Marketing – <span class="text-[#c48956]">Africa Immo Benin</span>
-            </h3>
-
-            <p class="text-sm text-[#bdafa3] leading-relaxed">
-              Création des annonces et visuels de biens immobiliers, gestion des réseaux sociaux (+45% d'engagement,
-              croissance de 7 000 à 10 000 abonnés qualifiés) et campagnes d'acquisition.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================================
-       [SECTION 6 : | REVIEWS & TESTIMONIALS | - TÉMOIGNAGES CLIENTS]
-       ========================================================================= -->
-  <section id="avis" class="py-24 bg-[#170f0b] border-t border-[#c48956]/15 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <!-- Category Tag & Heading -->
-      <div class="editorial-tag mb-3">
-        <span>| REVIEWS & TESTIMONIALS |</span>
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-serif text-[#f5ede4] font-normal tracking-tight mb-4">
-        Ce qu'ils disent de ma collaboration
-      </h2>
-      <p class="text-sm text-[#bdafa3] max-w-xl mb-14">
-        La satisfaction des équipes et des décideurs avec lesquels j'ai eu l'opportunité de collaborer.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Review 1 -->
-        <div class="luxury-card p-8 rounded-2xl space-y-5 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex items-center gap-1 text-[#c48956]">
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            </div>
-            <p class="text-sm text-[#ebdcd0] leading-relaxed quote-serif text-base">
-              « Hubert a transformé notre visibilité sur 6 campus. Sa cadence de 5 vidéos par jour, tournées et montées
-              avec une qualité irréprochable, a suscité un engouement sans précédent chez nos étudiants et nos
-              prospects. »
-            </p>
-          </div>
-          <div class="pt-4 border-t border-[#c48956]/15">
-            <p class="text-sm font-serif font-bold text-[#f5ede4]">Direction Pédagogique</p>
-            <p class="text-xs text-[#8a7b70]">Institut du Multimédia Appliqué (IMA)</p>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="luxury-card p-8 rounded-2xl space-y-5 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex items-center gap-1 text-[#c48956]">
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            </div>
-            <p class="text-sm text-[#ebdcd0] leading-relaxed quote-serif text-base">
-              « Passer de 200 à 3 000 abonnés qualifiés sur LinkedIn a totalement changé notre pipeline commercial SaaS.
-              Hubert a ce talent rare de lier créativité éditoriale et rigueur des métriques de conversion. »
-            </p>
-          </div>
-          <div class="pt-4 border-t border-[#c48956]/15">
-            <p class="text-sm font-serif font-bold text-[#f5ede4]">Directeur Général</p>
-            <p class="text-xs text-[#8a7b70]">IWO GROUP SARL</p>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="luxury-card p-8 rounded-2xl space-y-5 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex items-center gap-1 text-[#c48956]">
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            </div>
-            <p class="text-sm text-[#ebdcd0] leading-relaxed quote-serif text-base">
-              « Un professionnel rigoureux, ponctuel et profondément engagé. Grâce à son animation de nos réseaux, notre
-              communauté a grandi de 1 500 membres en seulement 4 mois tout en renforçant notre plaidoyer. »
-            </p>
-          </div>
-          <div class="pt-4 border-t border-[#c48956]/15">
-            <p class="text-sm font-serif font-bold text-[#f5ede4]">Coordinatrice de Programmes</p>
-            <p class="text-xs text-[#8a7b70]">ONG JVE Bénin</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================================
-       [SECTION 7 : | CREDENTIALS & EDUCATION | - FORMATIONS & DIPLÔMES]
-       ========================================================================= -->
-  <section id="formations" class="py-24 bg-[#120b08] border-t border-[#c48956]/15 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <!-- Category Tag & Heading -->
-      <div class="editorial-tag mb-3">
-        <span>| CREDENTIALS & DEGREES |</span>
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-serif text-[#f5ede4] font-normal tracking-tight mb-4">
-        Formations & Diplômes
-      </h2>
-      <p class="text-sm text-[#bdafa3] max-w-xl mb-14">
-        Une base académique universitaire solide combinée à des certifications professionnelles de référence.
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Diplôme 1: EPITECH -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <span class="text-[10px] font-bold text-[#c48956] uppercase tracking-wider">Année 2023</span>
-            <h3 class="text-base font-serif font-bold text-[#f5ede4]">Certificat en Développement & Data Analysis</h3>
-            <p class="text-xs font-semibold text-[#c48956]">EPITECH Bénin</p>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Immersion intensive en technologies web, analyse de données, manipulation d'algorithmes et automatisation
-              digitale.
-            </p>
-          </div>
-          <div
-            class="pt-3 border-t border-[#c48956]/15 text-[10px] text-[#8a7b70] uppercase font-semibold tracking-wider">
-            Certification Pro
-          </div>
-        </div>
-
-        <!-- Diplôme 2: Tiar Media Group -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <span class="text-[10px] font-bold text-[#c48956] uppercase tracking-wider">Année 2022</span>
-            <h3 class="text-base font-serif font-bold text-[#f5ede4]">Certificat en Community Management</h3>
-            <p class="text-xs font-semibold text-[#c48956]">Tiar Media Group</p>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Stratégies de gestion de communautés, storytelling social media, modération, engagement de marque et
-              gestion de crise.
-            </p>
-          </div>
-          <div
-            class="pt-3 border-t border-[#c48956]/15 text-[10px] text-[#8a7b70] uppercase font-semibold tracking-wider">
-            Spécialisation Social Media
-          </div>
-        </div>
-
-        <!-- Diplôme 3: Digital Valley -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <span class="text-[10px] font-bold text-[#c48956] uppercase tracking-wider">Année 2022</span>
-            <h3 class="text-base font-serif font-bold text-[#f5ede4]">Attestation WordPress Avancé</h3>
-            <p class="text-xs font-semibold text-[#c48956]">Digital Valley & ITC</p>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Conception de sites vitrines et plateformes e-commerce, ergonomie UI/UX et optimisation technique SEO.
-            </p>
-          </div>
-          <div
-            class="pt-3 border-t border-[#c48956]/15 text-[10px] text-[#8a7b70] uppercase font-semibold tracking-wider">
-            Expertise CMS & Web
-          </div>
-        </div>
-
-        <!-- Diplôme 4: FASEG UAC -->
-        <div class="luxury-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <span class="text-[10px] font-bold text-[#c48956] uppercase tracking-wider">Année 2016</span>
-            <h3 class="text-base font-serif font-bold text-[#f5ede4]">Licence en Statistiques et Économétrie</h3>
-            <p class="text-xs font-semibold text-[#c48956]">FASEG, UAC</p>
-            <p class="text-xs text-[#bdafa3] leading-relaxed">
-              Fondements universitaires de haut niveau en modélisation mathématique, analyse quantitative et prévision
-              statistique.
-            </p>
-          </div>
-          <div
-            class="pt-3 border-t border-[#c48956]/15 text-[10px] text-[#8a7b70] uppercase font-semibold tracking-wider">
-            Diplôme Universitaire d'État
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================================================================
-       [SECTION 8 : | CONTACT ME | - PRENDRE CONTACT & COMMISSIONS]
-       ========================================================================= -->
-  <section id="contact" class="py-24 bg-[#170f0b] border-t border-[#c48956]/15 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <!-- Category Tag & Heading -->
-      <div class="editorial-tag mb-3">
-        <span>| CONTACT ME |</span>
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-serif text-[#f5ede4] font-normal tracking-tight mb-4">
-        Donnons Vie à Votre Stratégie
-      </h2>
-      <p class="text-sm text-[#bdafa3] max-w-xl mb-14">
-        Vous souhaitez propulser votre audience, dynamiser votre production vidéo ou structurer votre acquisition ?
-        Échangeons dès aujourd'hui.
-      </p>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
-        <!-- Left Column: Direct Coordonnées -->
-        <div class="lg:col-span-5 space-y-6">
-          <div class="luxury-card p-8 rounded-3xl space-y-6">
-            <h3 class="text-2xl font-serif text-[#f5ede4] font-medium">
-              Coordonnées Directes
-            </h3>
-            <p class="text-xs sm:text-sm text-[#bdafa3] leading-relaxed">
-              Basé à Cotonou (Bénin), disponible pour des missions locales et internationales (remote & missions sur
-              site). Réponse sous 24h.
-            </p>
-
-            <div class="space-y-4 pt-2">
-
-              <!-- Téléphone WhatsApp 1 -->
-              <a href="https://wa.me/2290197150777?text=Bonjour%20Hubert,%20je%20souhaite%20collaborer%20avec%20vous."
-                target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-4 p-4 rounded-xl bg-[#120b08]/80 border border-[#c48956]/20 hover:border-[#c48956] transition-all group">
-                <div
-                  class="w-11 h-11 rounded-full bg-[#20140e] text-[#c48956] border border-[#c48956]/30 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <i data-lucide="phone-call" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <p class="text-[10px] text-[#8a7b70] font-bold uppercase tracking-wider">Téléphone & WhatsApp
-                    Principal</p>
-                  <p class="text-sm font-semibold text-[#f5ede4] group-hover:text-[#c48956] transition-colors">
-                    (+229) 01 97 15 07 77
-                  </p>
-                </div>
-              </a>
-
-              <!-- Téléphone Ligne 2 -->
-              <a href="https://wa.me/2290192163618?text=Bonjour%20Hubert,%20je%20souhaite%20collaborer%20avec%20vous."
-                target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-4 p-4 rounded-xl bg-[#120b08]/80 border border-[#c48956]/20 hover:border-[#c48956] transition-all group">
-                <div
-                  class="w-11 h-11 rounded-full bg-[#20140e] text-[#c48956] border border-[#c48956]/30 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <i data-lucide="smartphone" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <p class="text-[10px] text-[#8a7b70] font-bold uppercase tracking-wider">Ligne Secondaire</p>
-                  <p class="text-sm font-semibold text-[#f5ede4] group-hover:text-[#c48956] transition-colors">
-                    (+229) 01 92 16 36 18
-                  </p>
-                </div>
-              </a>
-
-              <!-- E-mail Professionnel -->
-              <a href="mailto:huberttonoukouin@gmail.com?subject=Contact%20Professionnel%20-%20Portfolio"
-                class="flex items-center gap-4 p-4 rounded-xl bg-[#120b08]/80 border border-[#c48956]/20 hover:border-[#c48956] transition-all group">
-                <div
-                  class="w-11 h-11 rounded-full bg-[#20140e] text-[#c48956] border border-[#c48956]/30 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <i data-lucide="mail" class="w-5 h-5"></i>
-                </div>
-                <div class="overflow-hidden">
-                  <p class="text-[10px] text-[#8a7b70] font-bold uppercase tracking-wider">E-mail Professionnel</p>
-                  <p class="text-sm font-semibold text-[#f5ede4] group-hover:text-[#c48956] transition-colors truncate">
-                    huberttonoukouin@gmail.com
-                  </p>
-                </div>
-              </a>
-
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/huberttsossou" target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-4 p-4 rounded-xl bg-[#120b08]/80 border border-[#c48956]/20 hover:border-[#c48956] transition-all group">
-                <div
-                  class="w-11 h-11 rounded-full bg-[#20140e] text-[#c48956] border border-[#c48956]/30 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <i data-lucide="linkedin" class="w-5 h-5"></i>
-                </div>
-                <div class="overflow-hidden">
-                  <p class="text-[10px] text-[#8a7b70] font-bold uppercase tracking-wider">Profil LinkedIn</p>
-                  <p class="text-sm font-semibold text-[#f5ede4] group-hover:text-[#c48956] transition-colors truncate">
-                    linkedin.com/in/huberttsossou
-                  </p>
-                </div>
-              </a>
-
-            </div>
-
-            <!-- Download CV Block -->
-            <div class="pt-4 border-t border-[#c48956]/20">
-              <a href="assets/CV_Hubert_SOSSOU_TONOUKOUIN.pdf" download="CV_Hubert_SOSSOU_TONOUKOUIN.pdf"
-                class="w-full py-3.5 rounded-sm btn-camel-outline text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
-                <i data-lucide="download" class="w-4 h-4 text-[#c48956]"></i>
-                <span>Télécharger mon Curriculum Vitae (PDF)</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Right Column: Interactive Form -->
-        <div class="lg:col-span-7">
-          <div class="luxury-card p-8 sm:p-10 rounded-3xl shadow-2xl">
-            <h3 class="text-2xl font-serif text-[#f5ede4] font-medium mb-2">
-              Envoyer un message direct
-            </h3>
-            <p class="text-xs sm:text-sm text-[#bdafa3] mb-8">
-              Remplissez ce formulaire et recevez une réponse détaillée sous 24h ouvrées.
-            </p>
-
-            <form id="contactForm" class="space-y-5">
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div class="space-y-2">
-                  <label for="name" class="block text-xs font-bold text-[#8a7b70] uppercase tracking-wider">
-                    Nom & Prénom *
-                  </label>
-                  <input type="text" id="name" name="name" required placeholder="Ex : Sarah Lawson"
-                    class="w-full px-4 py-3.5 rounded-xl input-luxury text-sm placeholder-[#8a7b70]">
-                </div>
-
-                <div class="space-y-2">
-                  <label for="email" class="block text-xs font-bold text-[#8a7b70] uppercase tracking-wider">
-                    Adresse E-mail *
-                  </label>
-                  <input type="email" id="email" name="email" required placeholder="sarah@entreprise.com"
-                    class="w-full px-4 py-3.5 rounded-xl input-luxury text-sm placeholder-[#8a7b70]">
-                </div>
-              </div>
-
-              <div class="space-y-2">
-                <label for="subject" class="block text-xs font-bold text-[#8a7b70] uppercase tracking-wider">
-                  Sujet de votre demande
-                </label>
-                <input type="text" id="subject" name="subject"
-                  placeholder="Ex : Production Vidéo / Community Management / Stratégie B2B"
-                  class="w-full px-4 py-3.5 rounded-xl input-luxury text-sm placeholder-[#8a7b70]">
-              </div>
-
-              <div class="space-y-2">
-                <label for="message" class="block text-xs font-bold text-[#8a7b70] uppercase tracking-wider">
-                  Votre Message *
-                </label>
-                <textarea id="message" name="message" rows="4" required
-                  placeholder="Bonjour Hubert, je souhaite vous parler d'un projet de communication concernant..."
-                  class="w-full px-4 py-3.5 rounded-xl input-luxury text-sm placeholder-[#8a7b70] resize-none"></textarea>
-              </div>
-
-              <div class="pt-2">
-                <button type="submit" id="contactSubmitBtn"
-                  class="w-full py-4 rounded-sm btn-camel-solid text-white font-semibold text-xs uppercase tracking-widest shadow-lg flex items-center justify-center gap-2 group">
-                  <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                  <span>Envoyer mon message</span>
+              <div class="accordion-header-right">
+                <span class="accordion-period" data-i18n="org1_sub">Stratégie digitale et recrutement d'étudiants sur 6 campus.</span>
+                <button class="accordion-arrow-btn" aria-label="Voir les détails complets de la mission IMA" title="Voir les détails complets">
+                  <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
                 </button>
               </div>
-
-              <!-- Toast notification -->
-              <div id="contactToast"
-                class="hidden items-center gap-3 p-4 rounded-xl bg-[#20140e] border border-[#c48956]/40 text-[#c48956] text-sm">
-                <i data-lucide="check-circle-2" class="w-5 h-5 flex-shrink-0"></i>
+            </div>
+            <div class="accordion-content">
+              <div class="entity-body-grid">
                 <div>
-                  <p class="font-bold text-[#f5ede4]">Message transmis avec succès !</p>
-                  <p class="text-xs text-[#bdafa3]">Hubert a bien reçu votre demande et vous répondra sous 24h.</p>
+                  <span class="entity-subheading" data-i18n="lbl_canaux">CANAUX & OUTILS</span>
+                  <div class="entity-tags-row">
+                    <span class="entity-tag-chip">Réseaux sociaux</span>
+                    <span class="entity-tag-chip">Google Business</span>
+                    <span class="entity-tag-chip">Campagnes marketing</span>
+                    <span class="entity-tag-chip">Événements</span>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_kpis">INDICATEURS CLÉS</span>
+                  <div class="entity-kpi-grid">
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">6</span>
+                      <span class="entity-kpi-lbl" data-i18n="lbl_campus_couv">Campus couverts</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">2</span>
+                      <span class="entity-kpi-lbl" data-i18n="lbl_pays_couv">Pays (Bénin, Togo)</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">Mensuel</span>
+                      <span class="entity-kpi-lbl" data-i18n="lbl_reporting">Reporting KPI</span>
+                    </div>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_apercu">APERÇU</span>
+                  <p class="entity-overview" data-i18n="org1_desc">
+                    Pilotage de la visibilité numérique globale des 6 campus, structuration des campagnes d'admission et suivi décisionnel des taux de conversion étudiants.
+                  </p>
+
+                  <button class="entity-cta-detail-btn view-details-trigger" data-org="ima">
+                    <span data-i18n="btn_full_details">Consulter le dossier détaillé de la mission</span>
+                    <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
+                  </button>
+                </div>
+
+                <div class="entity-preview-box">
+                  <img src="assets/project_powerbi.jpg" alt="Aperçu des indicateurs IMA">
                 </div>
               </div>
+            </div>
+          </div>
+
+          <!-- ORGANISATION 2 : IWO GROUP SARL -->
+          <div class="accordion-item reveal-on-scroll" data-org-id="iwo">
+            <div class="accordion-header">
+              <div class="accordion-header-left">
+                <h3 class="accordion-title">IWO GROUP SARL</h3>
+                <span class="accordion-sector" data-i18n="org2_cat">B2B services</span>
+              </div>
+              <div class="accordion-header-right">
+                <span class="accordion-period" data-i18n="org2_sub">Croissance de la présence digitale et acquisition client.</span>
+                <button class="accordion-arrow-btn" aria-label="Voir les détails complets de la mission IWO GROUP" title="Voir les détails complets">
+                  <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <div class="entity-body-grid">
+                <div>
+                  <span class="entity-subheading" data-i18n="lbl_canaux">CANAUX & OUTILS</span>
+                  <div class="entity-tags-row">
+                    <span class="entity-tag-chip">LinkedIn B2B</span>
+                    <span class="entity-tag-chip">Meta Ads</span>
+                    <span class="entity-tag-chip">CRM & Growth</span>
+                    <span class="entity-tag-chip">Tutoriels Vidéo</span>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_kpis">INDICATEURS CLÉS</span>
+                  <div class="entity-kpi-grid">
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">+1 385%</span>
+                      <span class="entity-kpi-lbl">Croissance LinkedIn</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">+395%</span>
+                      <span class="entity-kpi-lbl">Communauté FB</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">3</span>
+                      <span class="entity-kpi-lbl">Nouveaux canaux</span>
+                    </div>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_apercu">APERÇU</span>
+                  <p class="entity-overview" data-i18n="org2_desc">
+                    Développement de la notoriété des logiciels SaaS, acquisition de leads B2B, automatisation CRM et production de tutoriels vidéo axés sur l'expertise métier.
+                  </p>
+
+                  <button class="entity-cta-detail-btn view-details-trigger" data-org="iwo">
+                    <span data-i18n="btn_full_details">Consulter le dossier détaillé de la mission</span>
+                    <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
+                  </button>
+                </div>
+
+                <div class="entity-preview-box">
+                  <img src="assets/poster_01.jpg" alt="IWO Invoicing & Gestion">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ORGANISATION 3 : ONG JVE BÉNIN -->
+          <div class="accordion-item reveal-on-scroll" data-org-id="jve">
+            <div class="accordion-header">
+              <div class="accordion-header-left">
+                <h3 class="accordion-title">ONG JVE Bénin</h3>
+                <span class="accordion-sector" data-i18n="org3_cat">ONG • Environnement</span>
+              </div>
+              <div class="accordion-header-right">
+                <span class="accordion-period" data-i18n="org3_sub">Communication web, médias sociaux et animation de communauté.</span>
+                <button class="accordion-arrow-btn" aria-label="Voir les détails complets de la mission JVE Bénin" title="Voir les détails complets">
+                  <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <div class="entity-body-grid">
+                <div>
+                  <span class="entity-subheading" data-i18n="lbl_canaux">CANAUX & OUTILS</span>
+                  <div class="entity-tags-row">
+                    <span class="entity-tag-chip">Réseaux Sociaux</span>
+                    <span class="entity-tag-chip">Relations Presse</span>
+                    <span class="entity-tag-chip">Couverture Vidéo</span>
+                    <span class="entity-tag-chip">Adhésions</span>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_kpis">INDICATEURS CLÉS</span>
+                  <div class="entity-kpi-grid">
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">+30%</span>
+                      <span class="entity-kpi-lbl">Engagement global</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">100+</span>
+                      <span class="entity-kpi-lbl">Membres mobilisés</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">National</span>
+                      <span class="entity-kpi-lbl">Impact terrain</span>
+                    </div>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_apercu">APERÇU</span>
+                  <p class="entity-overview" data-i18n="org3_desc">
+                    Valorisation citoyenne par la vidéo de terrain, rédaction de rapports de sensibilisation et structuration de la communauté active de volontaires.
+                  </p>
+
+                  <button class="entity-cta-detail-btn view-details-trigger" data-org="jve">
+                    <span data-i18n="btn_full_details">Consulter le dossier détaillé de la mission</span>
+                    <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
+                  </button>
+                </div>
+
+                <div class="entity-preview-box">
+                  <img src="assets/reel_3.jpg" alt="Reportage et sensibilisation ONG JVE">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ORGANISATION 4 : AFRICA IMMO BÉNIN -->
+          <div class="accordion-item reveal-on-scroll" data-org-id="africaimmo">
+            <div class="accordion-header">
+              <div class="accordion-header-left">
+                <h3 class="accordion-title">Africa Immo Bénin</h3>
+                <span class="accordion-sector" data-i18n="org4_cat">B2C Immobilier</span>
+              </div>
+              <div class="accordion-header-right">
+                <span class="accordion-period" data-i18n="org4_sub">Stratégie digitale avec suivi analytique et prospection en ligne.</span>
+                <button class="accordion-arrow-btn" aria-label="Voir les détails complets de la mission Africa Immo" title="Voir les détails complets">
+                  <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <div class="entity-body-grid">
+                <div>
+                  <span class="entity-subheading" data-i18n="lbl_canaux">CANAUX & OUTILS</span>
+                  <div class="entity-tags-row">
+                    <span class="entity-tag-chip">Facebook Ads</span>
+                    <span class="entity-tag-chip">Social Selling</span>
+                    <span class="entity-tag-chip">Catalogue Web</span>
+                    <span class="entity-tag-chip">WhatsApp Direct</span>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_kpis">INDICATEURS CLÉS</span>
+                  <div class="entity-kpi-grid">
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">+45%</span>
+                      <span class="entity-kpi-lbl">Engagement réseaux</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">Qualifiés</span>
+                      <span class="entity-kpi-lbl">Leads acquéreurs</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">Actes</span>
+                      <span class="entity-kpi-lbl">Ventes concrétisées</span>
+                    </div>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_apercu">APERÇU</span>
+                  <p class="entity-overview" data-i18n="org4_desc">
+                    Création de campagnes publicitaires à fort impact pour promouvoir les parcelles et opportunités foncières, avec conclusion effective de ventes.
+                  </p>
+
+                  <button class="entity-cta-detail-btn view-details-trigger" data-org="africaimmo">
+                    <span data-i18n="btn_full_details">Consulter le dossier détaillé de la mission</span>
+                    <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
+                  </button>
+                </div>
+
+                <div class="entity-preview-box">
+                  <img src="assets/poster_07.jpg" alt="Campagnes promotionnelles Africa Immo">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ORGANISATION 5 : SEMJUICE FRANCE -->
+          <div class="accordion-item reveal-on-scroll" data-org-id="semjuice">
+            <div class="accordion-header">
+              <div class="accordion-header-left">
+                <h3 class="accordion-title">SemJuice France / Ogmius Oueb</h3>
+                <span class="accordion-sector" data-i18n="org5_cat">Agence • Rédaction web SEO</span>
+              </div>
+              <div class="accordion-header-right">
+                <span class="accordion-period" data-i18n="org5_sub">Rédaction d'articles optimisés pour des clients en France.</span>
+                <button class="accordion-arrow-btn" aria-label="Voir les détails complets de la mission SemJuice" title="Voir les détails complets">
+                  <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <div class="entity-body-grid">
+                <div>
+                  <span class="entity-subheading" data-i18n="lbl_canaux">CANAUX & OUTILS</span>
+                  <div class="entity-tags-row">
+                    <span class="entity-tag-chip">Rédaction SEO</span>
+                    <span class="entity-tag-chip">Maillage Sémantique</span>
+                    <span class="entity-tag-chip">WordPress</span>
+                    <span class="entity-tag-chip">Google Search</span>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_kpis">INDICATEURS CLÉS</span>
+                  <div class="entity-kpi-grid">
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">100+</span>
+                      <span class="entity-kpi-lbl">Articles livrés</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">Organique</span>
+                      <span class="entity-kpi-lbl">Croissance trafic</span>
+                    </div>
+                    <div class="entity-kpi-col">
+                      <span class="entity-kpi-val">Top 10</span>
+                      <span class="entity-kpi-lbl">Positions visées</span>
+                    </div>
+                  </div>
+
+                  <span class="entity-subheading" data-i18n="lbl_apercu">APERÇU</span>
+                  <p class="entity-overview" data-i18n="org5_desc">
+                    Production de contenus à forte valeur sémantique optimisés pour le référencement naturel et structuration méthodique des architectures de sites.
+                  </p>
+
+                  <button class="entity-cta-detail-btn view-details-trigger" data-org="semjuice">
+                    <span data-i18n="btn_full_details">Consulter le dossier détaillé de la mission</span>
+                    <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
+                  </button>
+                </div>
+
+                <div class="entity-preview-box">
+                  <img src="assets/project_marketing.jpg" alt="Rédaction SEO et positionnement web">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 05 — COMPÉTENCES ("De la data à la création")
+         ========================================================================= -->
+    <section id="competences" class="section skills-section">
+      <div class="container">
+        
+        <div class="reveal-on-scroll">
+          <span class="section-tag" data-i18n="skills_tag">COMPÉTENCES</span>
+          <h2 class="section-title" data-i18n="skills_title">De la data à la création.</h2>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Carte 1 -->
+          <div class="skill-card reveal-on-scroll reveal-stagger-1">
+            <span class="skill-card-tag" data-i18n="sk_1_title">Stratégie & Content</span>
+            <ul class="skill-bullets">
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_1_1">Stratégie digitale</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_1_2">Planification & modération</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_1_3">Rédaction web SEO</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_1_4">Veille informationnelle et concurrentielle</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_1_5">Reporting & rapports</span></li>
+            </ul>
+          </div>
+
+          <!-- Carte 2 -->
+          <div class="skill-card reveal-on-scroll reveal-stagger-2">
+            <span class="skill-card-tag" data-i18n="sk_2_title">Paid Social & Ads</span>
+            <ul class="skill-bullets">
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_2_1">Facebook Ads</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_2_2">LinkedIn Ads</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_2_3">Google Ads & TikTok Ads</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_2_4">CRM : Brevo, Systeme.io</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_2_5">Meta Pixel & GTM</span></li>
+            </ul>
+          </div>
+
+          <!-- Carte 3 -->
+          <div class="skill-card reveal-on-scroll reveal-stagger-3">
+            <span class="skill-card-tag" data-i18n="sk_3_title">Création visuelle & vidéo</span>
+            <ul class="skill-bullets">
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_3_1">Photoshop, Illustrator, InDesign</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_3_2">Canva</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_3_3">CapCut, InVideo, Veed</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_3_4">Capsules vidéo smartphone</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_3_5">Roll-up, bannières, carrousels</span></li>
+            </ul>
+          </div>
+
+          <!-- Carte 4 -->
+          <div class="skill-card reveal-on-scroll reveal-stagger-1">
+            <span class="skill-card-tag" data-i18n="sk_4_title">Data & Analyse</span>
+            <ul class="skill-bullets">
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_4_1">Python (Pandas, NumPy)</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_4_2">SQL, Excel avancé</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_4_3">Power BI, dashboards</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_4_4">EViews, Stata (notions)</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_4_5">KoboToolbox, ODK</span></li>
+            </ul>
+          </div>
+
+          <!-- Carte 5 -->
+          <div class="skill-card reveal-on-scroll reveal-stagger-2">
+            <span class="skill-card-tag" data-i18n="sk_5_title">Statistiques & IA</span>
+            <ul class="skill-bullets">
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_5_1">Économétrie, modélisation</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_5_2">Sondages & études de marché</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_5_3">Machine Learning, NLP</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_5_4">Pipelines ETL, Apache Kafka</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_5_5">Prompt Engineering IA</span></li>
+            </ul>
+          </div>
+
+          <!-- Carte 6 -->
+          <div class="skill-card reveal-on-scroll reveal-stagger-3">
+            <span class="skill-card-tag" data-i18n="sk_6_title">Outils & Outils collaboratifs</span>
+            <ul class="skill-bullets">
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_6_1">Google Analytics</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_6_2">Hootsuite, Buffer</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_6_3">Trello, Jira</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_6_4">WordPress</span></li>
+              <li class="skill-bullet-item"><span class="bullet-dot"></span><span data-i18n="sk_6_5">GitHub, Linux</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 06 — GALERIE DE CRÉATIONS & VIDÉOS
+         Visuels Réels et Authentiques conformes à la maquette
+         ========================================================================= -->
+    <section id="realisations" class="section gallery-section">
+      <div class="container">
+        
+        <div class="reveal-on-scroll">
+          <span class="section-tag" data-i18n="gal_tag">RÉALISATIONS</span>
+          <h2 class="section-title" data-i18n="gal_title">Galerie de créations.</h2>
+          <p class="section-subtitle" data-i18n="gal_sub">
+            Infographies, bannières, carrousels et ebooks leadmagnets.
+          </p>
+        </div>
+
+        <!-- Grille des Flyers et Visuels Originaux (3 Colonnes) -->
+        <div class="posters-grid">
+          
+          <div class="poster-card reveal-on-scroll reveal-stagger-1" data-title="IWO Invoicing — Automatisation Comptable" data-desc="Campagne B2B pour la simplification de la facturation normalisée.">
+            <img src="assets/poster_01.jpg" alt="IWO Invoicing De la facture à la comptabilité" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-2" data-title="IWO Invoicing — Annulation en 1 Clic" data-desc="Visuel didactique pour l'annulation de factures normalisées.">
+            <img src="assets/poster_02.jpg" alt="IWO Invoicing Annuler une facture normalisée" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-3" data-title="IWO Stocks — Optimisation des Stocks" data-desc="Format d'accroche pour la gestion intelligente des flux marchands.">
+            <img src="assets/poster_03.jpg" alt="IWO Stocks Savez-vous le produit qui dort" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-1" data-title="IWO Stocks — Du Petit Commerce au Distributeur" data-desc="Adaptabilité de la solution pour tous types d'entreprises.">
+            <img src="assets/poster_04.jpg" alt="IWO Stocks Du petit commerce au grand distributeur" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-2" data-title="IWO Invoicing — Module de Facturation" data-desc="Simplification de l'émission des factures normalisées au Bénin.">
+            <img src="assets/poster_05.jpg" alt="IWO Invoicing Module de facturation" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-3" data-title="Africa Immo — Club Tontine Immo Bénin" data-desc="Campagne d'accession à la propriété foncière sécurisée.">
+            <img src="assets/poster_06.jpg" alt="Club Tontine Africa Immo Bénin" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-1" data-title="Africa Immo — Fête des Mères & Amour" data-desc="Offre promotionnelle ciblée parcelles et domaines sécurisés.">
+            <img src="assets/poster_07.jpg" alt="Africa Immo Dites lui je t'aime" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-2" data-title="Africa Immo — Parcelles Sécurisées" data-desc="Catalogue foncier vérifié et titré à Cotonou et environs.">
+            <img src="assets/poster_08.jpg" alt="Africa Immo Parcelles et domaines" loading="lazy">
+          </div>
+
+          <div class="poster-card reveal-on-scroll reveal-stagger-3" data-title="Africa Immo — Sékou & Environs" data-desc="Opportunités foncières stratégiques en face du Lycée Medji.">
+            <img src="assets/poster_09.jpg" alt="Africa Immo Sékou parcelles" loading="lazy">
+          </div>
+
+        </div>
+
+        <!-- Sous-section Vidéos -->
+        <div class="videos-header reveal-on-scroll">
+          <h3 class="videos-title" data-i18n="vid_title">Vidéos</h3>
+          <p class="videos-sub" data-i18n="vid_sub">Aperçus depuis TikTok, YouTube et Facebook.</p>
+        </div>
+
+        <div class="videos-row-grid">
+          
+          <div class="video-card reveal-on-scroll reveal-stagger-1" data-title="IMA Bénin — Campus & Vie Étudiante" data-desc="Couverture vidéo dynamique des activités estudiantines et célébrations.">
+            <img src="assets/video_thumb_1.jpg" alt="IMA Bénin Vidéo Campus">
+            <div class="video-play-overlay">
+              <i data-lucide="play" style="fill: #FFFFFF; width: 22px; height: 22px; margin-left: 2px;"></i>
+            </div>
+            <div class="video-card-footer">
+              <span class="video-card-tag">TikTok & Reels</span>
+              <div class="video-card-caption">IMA Bénin — Campus</div>
+            </div>
+          </div>
+
+          <div class="video-card reveal-on-scroll reveal-stagger-2" data-title="IWO GROUP — Démo Produit" data-desc="Présentation interactive des fonctionnalités de facturation et gestion.">
+            <img src="assets/video_thumb_2.jpg" alt="IWO GROUP Démo Logiciel">
+            <div class="video-play-overlay">
+              <i data-lucide="play" style="fill: #FFFFFF; width: 22px; height: 22px; margin-left: 2px;"></i>
+            </div>
+            <div class="video-card-footer">
+              <span class="video-card-tag">YouTube</span>
+              <div class="video-card-caption">IWO GROUP — Produit</div>
+            </div>
+          </div>
+
+          <div class="video-card reveal-on-scroll reveal-stagger-3" data-title="IWO GROUP — Communication Stratégique" data-desc="Campagne vidéo B2B et valorisation de l'expertise logicielle.">
+            <img src="assets/video_thumb_3.jpg" alt="IWO GROUP Communication">
+            <div class="video-play-overlay">
+              <i data-lucide="play" style="fill: #FFFFFF; width: 22px; height: 22px; margin-left: 2px;"></i>
+            </div>
+            <div class="video-card-footer">
+              <span class="video-card-tag">Facebook & LinkedIn</span>
+              <div class="video-card-caption">IWO GROUP — Communication</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 07 — CONTACTS
+         ========================================================================= -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        
+        <div class="reveal-on-scroll">
+          <span class="section-tag" data-i18n="contact_tag">CONTACTS</span>
+          <h2 class="section-title" data-i18n="contact_title">
+            Construisons la prochaine<br>
+            campagne qui convertit.
+          </h2>
+          <p class="section-subtitle" data-i18n="contact_sub">
+            Disponible pour des missions en CDI ou freelance.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          
+          <!-- Formulaire de Contact -->
+          <div class="contact-form-card reveal-on-scroll reveal-stagger-1">
+            <form id="contactForm" novalidate>
+              
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="contactName" class="form-label" data-i18n="form_lbl_name">Votre nom</label>
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="Votre nom" required autocomplete="name">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="contactEmail" class="form-label" data-i18n="form_lbl_email">Votre email</label>
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="Votre email" required autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label" data-i18n="form_lbl_subject">Sujet</label>
+                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Sujet" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label" data-i18n="form_lbl_msg">Votre message</label>
+                <textarea id="contactMessage" name="message" class="form-textarea" placeholder="Votre message" required></textarea>
+              </div>
+
+              <button type="submit" id="submitContactBtn" class="btn btn-primary" style="width: 100%;">
+                <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="btn_send_wa">Envoyer via WhatsApp</span>
+              </button>
 
             </form>
           </div>
+
+          <!-- Coordonnées Directes -->
+          <div class="contact-info-card reveal-on-scroll reveal-stagger-2">
+            <div class="contact-brand-title">portfolio<span class="brand-dot"> . </span>digital</div>
+            
+            <div class="contact-status-live">
+              <span class="status-dot-live"></span>
+              <span data-i18n="contact_online">En ligne — discutons stratégie</span>
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;" data-i18n="contact_direct_lead">
+              Ou contactez-moi directement pour toute opportunité, étude de cas ou échange professionnel.
+            </p>
+
+            <div class="contact-links-list">
+              
+              <a href="mailto:huberttonoukouin@gmail.com" class="contact-link-row">
+                <i data-lucide="mail" style="color: var(--blue-primary); width: 18px; height: 18px;"></i>
+                <span>huberttonoukouin@gmail.com</span>
+              </a>
+
+              <a href="tel:+2290197150777" class="contact-link-row">
+                <i data-lucide="phone" style="color: var(--blue-primary); width: 18px; height: 18px;"></i>
+                <span>+229 01 97 15 07 77</span>
+              </a>
+
+              <a href="https://wa.me/2290197150777?text=Bonjour%20Hubert,%20j'ai%20consulté%20votre%20portfolio%20et%20je%20souhaite%20échanger%20avec%20vous." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="contact-link-row">
+                <i data-lucide="message-circle" style="color: #25D366; width: 18px; height: 18px;"></i>
+                <span>WhatsApp : (+229) 01 97 15 07 77</span>
+              </a>
+
+              <a href="assets/CV_Hubert_SOSSOU_TONOUKOUIN.pdf" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="contact-link-row"
+                 download="CV_Hubert_SOSSOU_TONOUKOUIN.pdf">
+                <i data-lucide="download" style="color: var(--blue-primary); width: 18px; height: 18px;"></i>
+                <span data-i18n="btn_dl_cv">Télécharger mon CV complet (PDF)</span>
+              </a>
+
+            </div>
+          </div>
+
         </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
-
+  </main>
 
   <!-- =========================================================================
-       [FOOTER - CLEAN & LUXURY CHOCOLATE]
+       FOOTER
        ========================================================================= -->
-  <footer class="bg-[#0e0705] border-t border-[#c48956]/20 py-12 relative">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#c48956]/15">
-
-        <!-- Logo & Description -->
-        <div class="flex items-center gap-3.5">
-          <div class="text-[#c48956]">
-            <!-- Star emblem -->
-            <svg class="w-9 h-9" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"
-                opacity="0.6" />
-              <circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="1.5" />
-              <polygon points="24,10 27.5,18.5 37.5,18.5 29.5,24 32.5,33 24,28 15.5,33 18.5,24 10.5,18.5 20.5,18.5"
-                fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.6" />
-              <circle cx="24" cy="24" r="2.5" fill="currentColor" />
-            </svg>
-          </div>
-          <div class="text-left">
-            <span class="font-serif text-[#f5ede4] text-base tracking-wide font-medium">
-              Hubert Sossou <span class="text-[#c48956]">Tonoukouin</span>
-            </span>
-            <p class="text-xs text-[#8a7b70]">
-              Community Manager & Spécialiste Marketing Digital
-            </p>
-          </div>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copy">
+          &copy; <span id="currentYear">2026</span> - Hubert SOSSOU TONOUKOUIN - Communication & Data. <span data-i18n="footer_rights">Tous droits réservés.</span>
         </div>
-
-        <!-- Social Links -->
-        <div class="flex items-center gap-3">
-          <a href="https://www.linkedin.com/in/huberttsossou" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            class="w-10 h-10 rounded-full bg-[#170f0b] hover:bg-[#b57948] text-[#c48956] hover:text-white border border-[#c48956]/25 flex items-center justify-center transition-all">
-            <i data-lucide="linkedin" class="w-4 h-4"></i>
-          </a>
-          <a href="https://wa.me/2290197150777" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-            class="w-10 h-10 rounded-full bg-[#170f0b] hover:bg-[#b57948] text-[#c48956] hover:text-white border border-[#c48956]/25 flex items-center justify-center transition-all">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-          </a>
-          <a href="mailto:huberttonoukouin@gmail.com" aria-label="Email"
-            class="w-10 h-10 rounded-full bg-[#170f0b] hover:bg-[#b57948] text-[#c48956] hover:text-white border border-[#c48956]/25 flex items-center justify-center transition-all">
-            <i data-lucide="mail" class="w-4 h-4"></i>
-          </a>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">
+          portfolio.digital • Cotonou, Bénin
         </div>
-
       </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8a7b70]">
-        <p>© 2026 Hubert Sossou Tonoukouin. Tous droits réservés.</p>
-        <p class="text-center sm:text-right">
-          Luxury Chocolate & Amber Edition • Conçu avec rigueur data & créativité visuelle
-        </p>
-      </div>
-
     </div>
   </footer>
 
-
   <!-- =========================================================================
-       PROJECT DETAILS MODAL DIALOG (RICH INTERACTION)
+       MODAL DE DÉTAILS D'ENTREPRISE / MISSION (DÉCLENCHÉ PAR LA FLÈCHE)
        ========================================================================= -->
-  <div id="projectModal"
-    class="fixed inset-0 z-50 hidden modal-backdrop-luxury flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
-    onclick="closeProjectModal()">
-    <div
-      class="relative w-full max-w-3xl bg-[#1c120c] border border-[#c48956]/30 rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto"
-      onclick="event.stopPropagation()">
-
-      <!-- Close Button -->
-      <button onclick="closeProjectModal()" aria-label="Fermer la fenêtre"
-        class="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#2a1a12] hover:bg-[#b57948] text-[#c48956] hover:text-white flex items-center justify-center transition-colors z-20">
-        <i data-lucide="x" class="w-5 h-5"></i>
+  <div id="detailsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Rapport détaillé de l'organisation">
+    <div class="modal-dialog">
+      <button id="modalCloseBtn" class="modal-close-btn" aria-label="Fermer">
+        <i data-lucide="x"></i>
       </button>
-
-      <!-- Dynamic Modal Content rendered via main.js -->
-      <div id="modalContent"></div>
-
+      <div id="detailsModalContent">
+        <!-- Rempli dynamiquement par JavaScript -->
+      </div>
     </div>
   </div>
 
-
-  <!-- Core Script File -->
+  <!-- Script Principal Interactive & Multilingue -->
   <script src="js/main.js"></script>
 </body>
-
 </html>
