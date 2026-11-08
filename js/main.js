@@ -432,6 +432,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Effet d'apparition douce et glissante au scroll
   initScrollReveal();
+
+  // Protection du contenu et du code source
+  initContentProtection();
 });
 
 function refreshIcons() {
@@ -762,4 +765,175 @@ function initScrollReveal() {
   });
 
   elements.forEach(el => observer.observe(el));
+}
+
+// --------------------------------------------------------------------------
+// 11. Protection du Contenu (Mobile & Desktop : Anti-copie, Anti-téléchargement)
+// Protection silencieuse sans aucune notification visuelle
+// --------------------------------------------------------------------------
+function initContentProtection() {
+  // 1. Bloquer universellement le menu contextuel (clic droit et appui long mobile)
+  const blockContextMenu = (e) => {
+    e.preventDefault();
+    return false;
+  };
+  window.addEventListener('contextmenu', blockContextMenu, { capture: true, passive: false });
+  document.addEventListener('contextmenu', blockContextMenu, { capture: true, passive: false });
+
+  // 2. Bloquer le démarrage de sélection de texte sur mobile et desktop (hors champs de formulaire)
+  document.addEventListener('selectstart', (e) => {
+    const target = e.target;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+      return true;
+    }
+    e.preventDefault();
+    return false;
+  }, { capture: true, passive: false });
+
+  // 3. Annuler instantanément toute tentative de sélection mobile résiduelle
+  document.addEventListener('selectionchange', () => {
+    const active = document.activeElement;
+    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) {
+      return;
+    }
+    const sel = window.getSelection();
+    if (sel && sel.removeAllRanges) {
+      sel.removeAllRanges();
+    }
+  });
+
+  // 4. Bloquer le glisser-déposer sur l'ensemble de la page
+  const blockDrag = (e) => {
+    e.preventDefault();
+    return false;
+  };
+  window.addEventListener('dragstart', blockDrag, { capture: true, passive: false });
+  document.addEventListener('dragstart', blockDrag, { capture: true, passive: false });
+
+  // 5. Gérer les gestes tactiles d'appui long sur mobile (évite l'apparition de loupe ou de menu)
+  let touchTimer = null;
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  window.addEventListener('touchstart', (e) => {
+    const target = e.target;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
+      return;
+    }
+
+    if (e.touches && e.touches.length === 1) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+
+      if (touchTimer) clearTimeout(touchTimer);
+      touchTimer = setTimeout(() => {
+        const sel = window.getSelection();
+        if (sel && sel.removeAllRanges) {
+          sel.removeAllRanges();
+        }
+      }, 250);
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches.length === 1) {
+      const dx = Math.abs(e.touches[0].clientX - touchStartX);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY);
+      if (dx > 8 || dy > 8) {
+        if (touchTimer) clearTimeout(touchTimer);
+      }
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    if (touchTimer) clearTimeout(touchTimer);
+  }, { passive: true });
+
+  window.addEventListener('touchcancel', () => {
+    if (touchTimer) clearTimeout(touchTimer);
+  }, { passive: true });
+
+  // 6. Sécurisation directe de toutes les balises <img> (statiques et dynamiques)
+  const secureAllImages = () => {
+    document.querySelectorAll('img').forEach((img) => {
+      img.setAttribute('draggable', 'false');
+      img.setAttribute('oncontextmenu', 'return false;');
+      img.style.pointerEvents = 'none';
+      img.style.webkitTouchCallout = 'none';
+      img.style.webkitUserSelect = 'none';
+      img.style.userSelect = 'none';
+    });
+  };
+  secureAllImages();
+
+  // Observer pour sécuriser immédiatement toute image ouverte dans le modal
+  const imgObserver = new MutationObserver(() => secureAllImages());
+  imgObserver.observe(document.body, { childList: true, subtree: true });
+
+  // 7. Bloquer les raccourcis clavier PC
+  document.addEventListener('keydown', (e) => {
+    // F12 (DevTools)
+    if (e.key === 'F12' || e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
+
+    const isCtrlOrCmd = e.ctrlKey || e.metaKey;
+
+    // Ctrl+U / Cmd+U (Afficher le code source)
+    if (isCtrlOrCmd && (e.key === 'u' || e.key === 'U' || e.keyCode === 85)) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+S / Cmd+S (Enregistrer la page web)
+    if (isCtrlOrCmd && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+I / J / C (Inspecteur d'éléments & Console DevTools)
+    if (isCtrlOrCmd && e.shiftKey) {
+      const k = e.key ? e.key.toUpperCase() : '';
+      if (k === 'I' || k === 'J' || k === 'C' || e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67) {
+        e.preventDefault();
+        return false;
+      }
+    }
+
+    // Ctrl+P / Cmd+P (Imprimer la page)
+    if (isCtrlOrCmd && (e.key === 'p' || e.key === 'P' || e.keyCode === 80)) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+C / Cmd+C (Copier du texte - autorisé seulement dans input et textarea)
+    if (isCtrlOrCmd && (e.key === 'c' || e.key === 'C' || e.keyCode === 67)) {
+      const tag = document.activeElement ? document.activeElement.tagName.toUpperCase() : '';
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+      }
+    }
+
+    // Ctrl+A / Cmd+A (Sélectionner tout - autorisé seulement dans input et textarea)
+    if (isCtrlOrCmd && (e.key === 'a' || e.key === 'A' || e.keyCode === 65)) {
+      const tag = document.activeElement ? document.activeElement.tagName.toUpperCase() : '';
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+      }
+    }
+  });
+
+  // 8. Empêcher la copie et le coupage globaux hors formulaire
+  const blockClipboard = (e) => {
+    const tag = document.activeElement ? document.activeElement.tagName.toUpperCase() : '';
+    if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+      e.preventDefault();
+      return false;
+    }
+  };
+  document.addEventListener('copy', blockClipboard);
+  document.addEventListener('cut', blockClipboard);
 }

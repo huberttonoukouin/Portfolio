@@ -78,12 +78,20 @@
 }
 
 /* ==========================================================================
-   RESET & FONDATIONS
+   RESET & FONDATIONS (AVEC PROTECTION MOBILE & DESKTOP INTÉGRÉE)
    ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Protection totale contre la sélection et le menu d'appui long sur mobile (iOS / Android) */
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -105,15 +113,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Saisie et édition de texte strictement autorisées dans les champs du formulaire */
+input, textarea, [contenteditable="true"] {
+  -webkit-touch-callout: default !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  pointer-events: auto !important;
+}
+
 ::selection {
+  background-color: transparent;
+  color: inherit;
+}
+
+input::selection, textarea::selection {
   background-color: var(--blue-primary);
   color: #FFFFFF;
 }
 
-img, svg {
+/* Protection absolue des images, vidéos et médias (anti-téléchargement et anti-glisser-déposer) */
+img, picture, video, canvas {
   display: block;
   max-width: 100%;
   height: auto;
+  pointer-events: none !important; /* Empêche Chrome Android et Safari de cibler l'image au tap prolongé */
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+
+svg {
+  display: block;
+  pointer-events: none;
+}
+
+/* Les boutons, liens et conteneurs cliquables restent 100% interactifs et réactifs */
+a, button, input, textarea, select, label,
+.btn, .theme-toggle, .lang-toggle, .mobile-toggle, .mobile-nav, .mobile-nav a,
+.poster-card, .video-card, .accordion-header, .accordion-arrow-btn,
+.entity-cta-detail-btn, .contact-link-row, .modal-close-btn, .modal-dialog a, .modal-dialog button {
+  pointer-events: auto !important;
+  -webkit-touch-callout: none !important;
 }
 
 a {
@@ -1508,3 +1555,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+
+
